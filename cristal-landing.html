@@ -1,0 +1,1107 @@
+
+<title>Cristal Épilatoire — LUXIVO</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root {
+    --bg: #FAF7F2;
+    --bg2: #F0EBE3;
+    --surface: #FFFFFF;
+    --accent: #C4956A;
+    --accent-light: #E8D5C0;
+    --accent-deep: #9E7347;
+    --text: #1C1410;
+    --text2: #6B5E52;
+    --text3: #9A8E82;
+    --rose: #E8C4B8;
+    --rose-deep: #C49080;
+    --border: #E2D8CE;
+    --cta: #C4956A;
+    --cta-hover: #9E7347;
+    --radius: 12px;
+    --radius-lg: 20px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16110C;
+      --bg2: #1F170F;
+      --surface: #261C12;
+      --accent: #D4A870;
+      --accent-light: #3A2A18;
+      --accent-deep: #E8C48A;
+      --text: #F5EEE6;
+      --text2: #C8B8A4;
+      --text3: #8A7A6A;
+      --rose: #5A3028;
+      --rose-deep: #C49080;
+      --border: #362A1E;
+      --cta: #D4A870;
+      --cta-hover: #E8C48A;
+    }
+  }
+  :root[data-theme="light"] {
+    --bg: #FAF7F2; --bg2: #F0EBE3; --surface: #FFFFFF;
+    --accent: #C4956A; --accent-light: #E8D5C0; --accent-deep: #9E7347;
+    --text: #1C1410; --text2: #6B5E52; --text3: #9A8E82;
+    --rose: #E8C4B8; --rose-deep: #C49080; --border: #E2D8CE;
+    --cta: #C4956A; --cta-hover: #9E7347;
+  }
+  :root[data-theme="dark"] {
+    --bg: #16110C; --bg2: #1F170F; --surface: #261C12;
+    --accent: #D4A870; --accent-light: #3A2A18; --accent-deep: #E8C48A;
+    --text: #F5EEE6; --text2: #C8B8A4; --text3: #8A7A6A;
+    --rose: #5A3028; --rose-deep: #C49080; --border: #362A1E;
+    --cta: #D4A870; --cta-hover: #E8C48A;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── ANNOUNCEMENT BAR ── */
+  .bar {
+    background: var(--text);
+    color: var(--bg);
+    text-align: center;
+    padding: 10px 16px;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+  }
+  .bar strong { color: var(--accent-light); }
+
+  /* ── LOGO ── */
+  .logo-wrap {
+    text-align: center;
+    padding: 28px 16px 0;
+  }
+  .logo {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 22px;
+    letter-spacing: 0.3em;
+    color: var(--text);
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 32px 20px 0;
+  }
+  @media (min-width: 860px) {
+    .hero {
+      grid-template-columns: 1fr 1fr;
+      max-width: 960px;
+      gap: 48px;
+      align-items: start;
+      padding: 48px 40px 0;
+    }
+  }
+
+  /* Product Image */
+  .hero-gallery {
+    position: relative;
+  }
+  .hero-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: var(--bg2);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-img canvas { width: 100%; height: 100%; display: block; }
+  .badge-new {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 100px;
+    font-weight: 600;
+  }
+
+  /* Hero Info */
+  .hero-info { padding-top: 8px; }
+  @media (min-width: 860px) { .hero-info { padding-top: 0; } }
+
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .hero-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(28px, 6vw, 42px);
+    font-weight: 400;
+    line-height: 1.15;
+    color: var(--text);
+    margin-bottom: 8px;
+    text-wrap: balance;
+  }
+  .hero-sub {
+    font-size: 15px;
+    color: var(--text2);
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+
+  .stars-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  .stars { color: var(--accent); font-size: 16px; letter-spacing: 2px; }
+  .stars-label { font-size: 13px; color: var(--text2); }
+
+  /* Price */
+  .price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 4px;
+  }
+  .price-main {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+  }
+  .price-old {
+    font-size: 18px;
+    color: var(--text3);
+    text-decoration: line-through;
+    font-variant-numeric: tabular-nums;
+  }
+  .price-save {
+    font-size: 12px;
+    background: var(--accent-light);
+    color: var(--accent-deep);
+    padding: 3px 10px;
+    border-radius: 100px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+  .price-note {
+    font-size: 12px;
+    color: var(--text3);
+    margin-bottom: 20px;
+  }
+
+  /* Bundle */
+  .bundle-label {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text2);
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .bundle-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  .bundle-card {
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    padding: 12px 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.18s, background 0.18s;
+    position: relative;
+    background: var(--surface);
+  }
+  .bundle-card:hover { border-color: var(--accent); }
+  .bundle-card.active {
+    border-color: var(--accent);
+    background: var(--accent-light);
+  }
+  .bundle-card .qty {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--text);
+    line-height: 1;
+    margin-bottom: 2px;
+  }
+  .bundle-card .qty-sub {
+    font-size: 10px;
+    color: var(--text2);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .bundle-card .b-price {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--accent-deep);
+    font-variant-numeric: tabular-nums;
+  }
+  .bundle-card .b-each {
+    font-size: 10px;
+    color: var(--text3);
+    margin-top: 2px;
+  }
+  .bundle-badge {
+    position: absolute;
+    top: -9px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent);
+    color: #fff;
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 100px;
+    white-space: nowrap;
+    font-weight: 700;
+  }
+
+  /* CTA */
+  .cta-btn {
+    display: block;
+    width: 100%;
+    background: var(--cta);
+    color: #fff;
+    border: none;
+    border-radius: 100px;
+    padding: 18px 24px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    transition: background 0.18s, transform 0.12s;
+    margin-bottom: 12px;
+  }
+  .cta-btn:hover { background: var(--cta-hover); transform: translateY(-1px); }
+  .cta-btn:active { transform: translateY(0); }
+
+  /* Countdown */
+  .countdown-wrap {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  .countdown-label {
+    font-size: 11px;
+    color: var(--text3);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .countdown-timer {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    color: var(--accent);
+    letter-spacing: 0.06em;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Trust row */
+  .trust-row {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding-top: 4px;
+  }
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    color: var(--text2);
+  }
+  .trust-icon { font-size: 14px; }
+
+  /* ── DIVIDER ── */
+  .section { padding: 64px 20px; max-width: 960px; margin: 0 auto; }
+  .section-sm { padding: 40px 20px; max-width: 960px; margin: 0 auto; }
+  hr.fancy {
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+    margin: 0 20px;
+  }
+
+  /* ── HOW IT WORKS ── */
+  .section-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(22px, 4vw, 32px);
+    font-weight: 400;
+    text-align: center;
+    color: var(--text);
+    margin-bottom: 8px;
+    text-wrap: balance;
+  }
+  .section-sub {
+    text-align: center;
+    color: var(--text2);
+    font-size: 15px;
+    margin-bottom: 40px;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+  }
+  .step-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 28px 24px;
+    text-align: center;
+  }
+  .step-num {
+    font-family: Georgia, serif;
+    font-size: 36px;
+    color: var(--accent-light);
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+  .step-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  .step-body { font-size: 13px; color: var(--text2); }
+
+  /* ── BENEFITS ── */
+  .benefits-bg { background: var(--bg2); }
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  @media (min-width: 640px) {
+    .benefits-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+  .benefit-card {
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 20px 16px;
+    text-align: center;
+    border: 1px solid var(--border);
+  }
+  .benefit-icon { font-size: 28px; margin-bottom: 8px; }
+  .benefit-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+  .benefit-body { font-size: 12px; color: var(--text2); line-height: 1.4; }
+
+  /* ── BEFORE / AFTER ── */
+  .before-after {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  .ba-card {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    position: relative;
+  }
+  .ba-card canvas { width: 100%; display: block; aspect-ratio: 3/4; }
+  .ba-label {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.55);
+    color: #fff;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 14px;
+    border-radius: 100px;
+    backdrop-filter: blur(4px);
+    white-space: nowrap;
+    font-weight: 600;
+  }
+
+  /* ── REVIEWS ── */
+  .reviews-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 36px;
+  }
+  .reviews-score {
+    font-family: Georgia, serif;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--text);
+  }
+  .reviews-stars { color: var(--accent); font-size: 22px; letter-spacing: 4px; }
+  .reviews-count { font-size: 13px; color: var(--text2); }
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+  }
+  .review-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+  }
+  .review-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .review-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    flex-shrink: 0;
+  }
+  .review-name { font-size: 14px; font-weight: 700; color: var(--text); }
+  .review-date { font-size: 11px; color: var(--text3); }
+  .review-stars { color: var(--accent); font-size: 13px; margin-bottom: 8px; }
+  .review-body { font-size: 14px; color: var(--text2); line-height: 1.55; }
+  .review-verified {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    color: #4CAF50;
+    margin-top: 10px;
+    font-weight: 600;
+  }
+
+  /* ── FAQ ── */
+  .faq-list { max-width: 640px; margin: 0 auto; }
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+  }
+  .faq-item:first-child { border-top: 1px solid var(--border); }
+  .faq-q {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 18px 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    transition: color 0.15s;
+  }
+  .faq-q:hover { color: var(--accent); }
+  .faq-icon {
+    color: var(--accent);
+    font-size: 20px;
+    flex-shrink: 0;
+    transition: transform 0.2s;
+    line-height: 1;
+  }
+  .faq-item.open .faq-icon { transform: rotate(45deg); }
+  .faq-a {
+    font-size: 14px;
+    color: var(--text2);
+    line-height: 1.65;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.2s;
+    padding-bottom: 0;
+  }
+  .faq-item.open .faq-a {
+    max-height: 300px;
+    padding-bottom: 18px;
+  }
+
+  /* ── GUARANTEE ── */
+  .guarantee-box {
+    background: var(--bg2);
+    border: 1.5px solid var(--accent-light);
+    border-radius: var(--radius-lg);
+    padding: 32px 28px;
+    text-align: center;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .guarantee-icon { font-size: 40px; margin-bottom: 12px; }
+  .guarantee-title {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+  .guarantee-body { font-size: 14px; color: var(--text2); line-height: 1.6; }
+
+  /* ── STICKY CTA ── */
+  .sticky-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 100;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
+  }
+  .sticky-info { flex: 1; min-width: 0; }
+  .sticky-name { font-size: 13px; font-weight: 700; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .sticky-price { font-size: 13px; color: var(--accent); font-weight: 600; }
+  .sticky-cta {
+    background: var(--cta);
+    color: #fff;
+    border: none;
+    border-radius: 100px;
+    padding: 13px 24px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.15s;
+    flex-shrink: 0;
+  }
+  .sticky-cta:hover { background: var(--cta-hover); }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--text);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 32px 20px 80px;
+    font-size: 12px;
+    line-height: 1.8;
+  }
+  .footer-logo {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    letter-spacing: 0.3em;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+  .footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .footer-links a:hover { color: rgba(255,255,255,0.8); }
+  .payment-row {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 12px 0;
+    flex-wrap: wrap;
+  }
+  .pay-chip {
+    background: rgba(255,255,255,0.1);
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 11px;
+    color: rgba(255,255,255,0.7);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+</style>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="bar">
+  🚚 Livraison offerte dès aujourd'hui · <strong>Stocks limités</strong>
+</div>
+
+<!-- LOGO -->
+<div class="logo-wrap">
+  <div class="logo">Luxivo</div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-gallery">
+    <div class="hero-img">
+      <canvas id="productCanvas" width="600" height="600"></canvas>
+    </div>
+    <div class="badge-new">Nouveau</div>
+  </div>
+  <div class="hero-info">
+    <div class="eyebrow">Épilation cristalline</div>
+    <h1 class="hero-title">Cristal Épilatoire</h1>
+    <p class="hero-sub">L'épilation douce et durable à domicile. Technologie cristalline — 100&nbsp;% indolore, résultats dès la première séance.</p>
+    <div class="stars-row">
+      <span class="stars">★★★★★</span>
+      <span class="stars-label">4,9/5 · +2 500 clientes</span>
+    </div>
+    <div class="price-row">
+      <span class="price-main">28,67&nbsp;€</span>
+      <span class="price-old">54,90&nbsp;€</span>
+      <span class="price-save">−48&nbsp;%</span>
+    </div>
+    <p class="price-note">Prix par unité · Frais de port offerts</p>
+
+    <p class="bundle-label">Choisissez votre formule</p>
+    <div class="bundle-grid">
+      <div class="bundle-card active" data-qty="1" data-price="28.67" onclick="selectBundle(this,28.67,'1+1')">
+        <div class="qty">1+1</div>
+        <div class="qty-sub">Duo</div>
+        <div class="b-price">28,67&nbsp;€</div>
+        <div class="b-each">14,34&nbsp;€/unité</div>
+      </div>
+      <div class="bundle-card" data-qty="2" data-price="57.34" onclick="selectBundle(this,57.34,'2+2')">
+        <div class="bundle-badge">Populaire</div>
+        <div class="qty">2+2</div>
+        <div class="qty-sub">Famille</div>
+        <div class="b-price">57,34&nbsp;€</div>
+        <div class="b-each">14,34&nbsp;€/unité</div>
+      </div>
+      <div class="bundle-card" data-qty="3" data-price="86.01" onclick="selectBundle(this,86.01,'3+3')">
+        <div class="qty">3+3</div>
+        <div class="qty-sub">Best value</div>
+        <div class="b-price">86,01&nbsp;€</div>
+        <div class="b-each">14,34&nbsp;€/unité</div>
+      </div>
+    </div>
+
+    <div class="countdown-wrap">
+      <div class="countdown-label">⏳ Offre expire dans</div>
+      <div class="countdown-timer" id="countdown">14:59</div>
+    </div>
+
+    <button class="cta-btn" onclick="scrollToCTA()">
+      Je veux mon Cristal Épilatoire →
+    </button>
+
+    <div class="trust-row">
+      <span class="trust-item"><span class="trust-icon">🔒</span> Paiement sécurisé</span>
+      <span class="trust-item"><span class="trust-icon">↩</span> Satisfaite ou remboursée</span>
+      <span class="trust-item"><span class="trust-icon">📦</span> 5–10 jours</span>
+    </div>
+  </div>
+</div>
+
+<hr class="fancy" style="margin-top: 48px;">
+
+<!-- HOW IT WORKS -->
+<div class="section">
+  <div class="eyebrow" style="text-align:center; margin-bottom:12px;">Comment ça marche</div>
+  <h2 class="section-title">En 3 gestes, c'est tout</h2>
+  <p class="section-sub">Pas de cire, pas de douleur, pas de salon. Votre épilation se fait chez vous, en quelques minutes.</p>
+  <div class="steps-grid">
+    <div class="step-card">
+      <div class="step-num">01</div>
+      <div class="step-title">Préparez votre peau</div>
+      <div class="step-body">Nettoyez et séchez complètement la zone à traiter avant utilisation.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">02</div>
+      <div class="step-title">Appliquez le Cristal</div>
+      <div class="step-body">Faites de petits mouvements circulaires sur la peau sèche pendant 5 à 10 minutes.</div>
+    </div>
+    <div class="step-card">
+      <div class="step-num">03</div>
+      <div class="step-title">Rincez & admirez</div>
+      <div class="step-body">Rincez à l'eau claire. Peau soyeuse, douce, sans aucune trace d'irritation.</div>
+    </div>
+  </div>
+</div>
+
+<hr class="fancy">
+
+<!-- BENEFITS -->
+<div class="benefits-bg">
+  <div class="section">
+    <div class="eyebrow" style="text-align:center; margin-bottom:12px;">Pourquoi l'adopter</div>
+    <h2 class="section-title">Des résultats visibles dès J1</h2>
+    <p class="section-sub" style="margin-bottom:32px;">La technologie cristalline agit en douceur, sans irritation ni rougeur.</p>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">✨</div>
+        <div class="benefit-title">100&nbsp;% indolore</div>
+        <div class="benefit-body">Zéro douleur. Adapté aux peaux les plus sensibles.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">💆</div>
+        <div class="benefit-title">Peau soyeuse</div>
+        <div class="benefit-body">Effet lissant immédiat, sans effet retour immédiat.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">♻️</div>
+        <div class="benefit-title">Réutilisable</div>
+        <div class="benefit-body">Un seul achat pour des années d'utilisation. Zéro déchet.</div>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🏠</div>
+        <div class="benefit-title">À domicile</div>
+        <div class="benefit-body">Résultats de salon, dans le confort de votre maison.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="fancy">
+
+<!-- BEFORE / AFTER -->
+<div class="section">
+  <div class="eyebrow" style="text-align:center; margin-bottom:12px;">Résultats réels</div>
+  <h2 class="section-title">Avant · Après</h2>
+  <p class="section-sub">Résultats obtenus par nos clientes après 2 séances.</p>
+  <div class="before-after">
+    <div class="ba-card">
+      <canvas id="beforeCanvas" width="300" height="400"></canvas>
+      <span class="ba-label">Avant</span>
+    </div>
+    <div class="ba-card">
+      <canvas id="afterCanvas" width="300" height="400"></canvas>
+      <span class="ba-label">Après</span>
+    </div>
+  </div>
+</div>
+
+<hr class="fancy">
+
+<!-- REVIEWS -->
+<div class="benefits-bg">
+  <div class="section">
+    <div class="reviews-header">
+      <div class="eyebrow">Avis clientes</div>
+      <div class="reviews-score">4,9</div>
+      <div class="reviews-stars">★★★★★</div>
+      <div class="reviews-count">Sur 2 500+ avis vérifiés</div>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-top">
+          <div class="review-avatar" style="background:#C4956A;">S</div>
+          <div>
+            <div class="review-name">Sophie M.</div>
+            <div class="review-date">Il y a 3 jours</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-body">«&nbsp;J'étais sceptique au départ mais franchement, ma peau n'a jamais été aussi douce. Aucune douleur, aucune rougeur. Je recommande à toutes mes amies&nbsp;!&nbsp;»</p>
+        <div class="review-verified">✓ Achat vérifié</div>
+      </div>
+      <div class="review-card">
+        <div class="review-top">
+          <div class="review-avatar" style="background:#9E7347;">L</div>
+          <div>
+            <div class="review-name">Laura T.</div>
+            <div class="review-date">Il y a 1 semaine</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-body">«&nbsp;Incroyable ! J'ai la peau atopique et je ne supporte aucun autre système d'épilation. Le Cristal épilatoire est une révolution pour moi. Résultat impeccable.&nbsp;»</p>
+        <div class="review-verified">✓ Achat vérifié</div>
+      </div>
+      <div class="review-card">
+        <div class="review-top">
+          <div class="review-avatar" style="background:#E8C4B8; color:#8B4A3A;">A</div>
+          <div>
+            <div class="review-name">Amira K.</div>
+            <div class="review-date">Il y a 2 semaines</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★</div>
+        <p class="review-body">«&nbsp;J'en ai commandé 2+2 pour ma sœur et moi. On est conquises. Livraison rapide, produit conforme à la description. On va en recommander !&nbsp;»</p>
+        <div class="review-verified">✓ Achat vérifié</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="fancy">
+
+<!-- FAQ -->
+<div class="section">
+  <div class="eyebrow" style="text-align:center; margin-bottom:12px;">Questions fréquentes</div>
+  <h2 class="section-title">On répond à tout</h2>
+  <p class="section-sub" style="margin-bottom:36px;"></p>
+  <div class="faq-list">
+    <div class="faq-item open">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Est-ce que l'utilisation est vraiment indolore ?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">Oui, à 100&nbsp;%. La technologie cristalline exfolie en douceur sans arracher ni tirer. Aucune rougeur, aucune irritation — même pour les peaux sensibles.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Sur quelles zones peut-on l'utiliser ?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">Jambes, bras, aisselles, ventre et dos. Évitez le visage et les zones intimes, où la peau est trop délicate.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Comment bien l'utiliser pour un résultat optimal ?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">Appliquez sur peau sèche et propre. Faites de petits mouvements circulaires pendant 5 à 10 minutes par zone. Rincez ensuite à l'eau claire et séchez délicatement.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Comment entretenir le Cristal épilatoire ?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">Rincez-le à l'eau claire après chaque utilisation et laissez-le sécher à l'air libre. Évitez les produits abrasifs ou les brosses dures qui pourraient rayer la surface cristalline.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">
+        Quels sont les délais de livraison ?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-a">5 à 10 jours ouvrés pour la France métropolitaine. Vous recevrez un email de confirmation avec votre numéro de suivi dès l'expédition.</div>
+    </div>
+  </div>
+</div>
+
+<hr class="fancy">
+
+<!-- GUARANTEE -->
+<div class="section-sm">
+  <div class="guarantee-box">
+    <div class="guarantee-icon">🛡️</div>
+    <h3 class="guarantee-title">Satisfaite ou Remboursée</h3>
+    <p class="guarantee-body">Vous avez 30 jours pour essayer le Cristal Épilatoire. Si vous n'êtes pas entièrement satisfaite, on vous rembourse intégralement. Sans question, sans conditions.</p>
+  </div>
+</div>
+
+<!-- STICKY BAR -->
+<div class="sticky-bar" id="stickyBar">
+  <div class="sticky-info">
+    <div class="sticky-name">Cristal Épilatoire</div>
+    <div class="sticky-price" id="stickyPrice">28,67&nbsp;€ · 1+1</div>
+  </div>
+  <button class="sticky-cta">Commander →</button>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-logo">Luxivo</div>
+  <div class="footer-links">
+    <a href="#">Mentions légales</a>
+    <a href="#">Politique de confidentialité</a>
+    <a href="#">CGV</a>
+    <a href="#">Contact</a>
+  </div>
+  <div class="payment-row">
+    <span class="pay-chip">Visa</span>
+    <span class="pay-chip">Mastercard</span>
+    <span class="pay-chip">PayPal</span>
+    <span class="pay-chip">Apple Pay</span>
+    <span class="pay-chip">CB</span>
+  </div>
+  <div>© 2026 LUXIVO · Tous droits réservés</div>
+</footer>
+
+<script>
+// ── PRODUCT CANVAS ──
+(function() {
+  const c = document.getElementById('productCanvas');
+  if (!c) return;
+  const ctx = c.getContext('2d');
+  const W = 600, H = 600;
+
+  // Background gradient — soft cream/blush
+  const bg = ctx.createRadialGradient(W/2, H/2, 0, W/2, H/2, W*0.7);
+  bg.addColorStop(0, '#F5EDE0');
+  bg.addColorStop(1, '#E8D5C0');
+  ctx.fillStyle = bg;
+  ctx.fillRect(0, 0, W, H);
+
+  // Subtle circle bg
+  ctx.beginPath();
+  ctx.arc(W/2, H/2, 220, 0, Math.PI*2);
+  ctx.fillStyle = 'rgba(196,149,106,0.08)';
+  ctx.fill();
+
+  // Cristal body — oval shape
+  ctx.save();
+  ctx.translate(W/2, H/2 + 20);
+
+  // Main body
+  const bodyGrad = ctx.createLinearGradient(-80, -200, 80, 200);
+  bodyGrad.addColorStop(0, '#F0E8DC');
+  bodyGrad.addColorStop(0.3, '#E8D5C0');
+  bodyGrad.addColorStop(0.7, '#C4956A');
+  bodyGrad.addColorStop(1, '#9E7347');
+  ctx.beginPath();
+  ctx.ellipse(0, 0, 80, 200, 0, 0, Math.PI*2);
+  ctx.fillStyle = bodyGrad;
+  ctx.fill();
+
+  // Shine
+  ctx.beginPath();
+  ctx.ellipse(-20, -80, 18, 60, -0.3, 0, Math.PI*2);
+  ctx.fillStyle = 'rgba(255,255,255,0.35)';
+  ctx.fill();
+
+  // Crystal surface texture — grid of small dots
+  ctx.fillStyle = 'rgba(255,255,255,0.15)';
+  for (let row = -8; row <= 8; row++) {
+    for (let col = -3; col <= 3; col++) {
+      const x = col * 20;
+      const y = row * 22;
+      const dist = Math.sqrt((x/80)**2 + (y/200)**2);
+      if (dist < 0.85) {
+        ctx.beginPath();
+        ctx.arc(x, y, 2, 0, Math.PI*2);
+        ctx.fill();
+      }
+    }
+  }
+
+  // Top cap
+  const capGrad = ctx.createLinearGradient(-60, -220, 60, -160);
+  capGrad.addColorStop(0, '#F5EDE0');
+  capGrad.addColorStop(1, '#D4B090');
+  ctx.beginPath();
+  ctx.ellipse(0, -200, 60, 25, 0, 0, Math.PI*2);
+  ctx.fillStyle = capGrad;
+  ctx.fill();
+
+  // Bottom cap
+  ctx.beginPath();
+  ctx.ellipse(0, 200, 60, 20, 0, 0, Math.PI*2);
+  ctx.fillStyle = '#9E7347';
+  ctx.fill();
+
+  ctx.restore();
+
+  // Label
+  ctx.font = '600 18px Georgia, serif';
+  ctx.fillStyle = 'rgba(28,20,16,0.45)';
+  ctx.textAlign = 'center';
+  ctx.fillText('LUXIVO', W/2, H - 32);
+  ctx.font = '11px system-ui';
+  ctx.fillStyle = 'rgba(28,20,16,0.3)';
+  ctx.fillText('Cristal Épilatoire', W/2, H - 14);
+})();
+
+// ── BEFORE/AFTER CANVAS ──
+function drawSkinCanvas(id, after) {
+  const c = document.getElementById(id);
+  if (!c) return;
+  const ctx = c.getContext('2d');
+  const W = 300, H = 400;
+
+  const skinGrad = ctx.createLinearGradient(0, 0, W, H);
+  if (after) {
+    skinGrad.addColorStop(0, '#F5E6D8');
+    skinGrad.addColorStop(1, '#E8D0B8');
+  } else {
+    skinGrad.addColorStop(0, '#D4A878');
+    skinGrad.addColorStop(1, '#C09060');
+  }
+  ctx.fillStyle = skinGrad;
+  ctx.fillRect(0, 0, W, H);
+
+  if (!after) {
+    // Draw leg shape with some hair dots to show "before"
+    ctx.fillStyle = 'rgba(80,50,20,0.45)';
+    const hairs = [[40,80],[80,60],[120,90],[60,130],[140,120],[90,170],[50,200],[130,190],
+                   [70,240],[150,250],[100,280],[60,310],[140,300],[80,340],[120,360],[50,380]];
+    hairs.forEach(([x,y]) => {
+      ctx.beginPath();
+      ctx.ellipse(x + Math.random()*80, y, 1, 6, Math.random()*Math.PI, 0, Math.PI*2);
+      ctx.fill();
+    });
+    // Some red dots
+    ctx.fillStyle = 'rgba(180,80,60,0.35)';
+    [[80,100],[140,160],[60,220],[120,280]].forEach(([x,y]) => {
+      ctx.beginPath();
+      ctx.arc(x,y,6,0,Math.PI*2);
+      ctx.fill();
+    });
+  } else {
+    // Smooth sheen
+    const sheen = ctx.createLinearGradient(0,0,W,0);
+    sheen.addColorStop(0,'rgba(255,255,255,0)');
+    sheen.addColorStop(0.4,'rgba(255,255,255,0.2)');
+    sheen.addColorStop(1,'rgba(255,255,255,0)');
+    ctx.fillStyle = sheen;
+    ctx.fillRect(0,0,W,H);
+    // sparkle dots
+    ctx.fillStyle='rgba(255,255,255,0.6)';
+    [[50,120],[120,200],[80,300],[160,160],[40,360]].forEach(([x,y])=>{
+      ctx.beginPath(); ctx.arc(x,y,3,0,Math.PI*2); ctx.fill();
+    });
+  }
+}
+drawSkinCanvas('beforeCanvas', false);
+drawSkinCanvas('afterCanvas', true);
+
+// ── COUNTDOWN ──
+let secs = 14 * 60 + 59;
+function tick() {
+  if (secs <= 0) { secs = 14 * 60 + 59; }
+  const m = String(Math.floor(secs/60)).padStart(2,'0');
+  const s = String(secs%60).padStart(2,'0');
+  document.getElementById('countdown').textContent = m + ':' + s;
+  secs--;
+}
+tick();
+setInterval(tick, 1000);
+
+// ── BUNDLE SELECT ──
+let currentPrice = '28,67 €';
+function selectBundle(el, price, label) {
+  document.querySelectorAll('.bundle-card').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  const formatted = price.toFixed(2).replace('.', ',') + ' €';
+  currentPrice = formatted;
+  document.getElementById('stickyPrice').innerHTML = formatted + ' · ' + label;
+}
+
+// ── FAQ ──
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  item.classList.toggle('open');
+}
+
+// ── SCROLL ──
+function scrollToCTA() {
+  window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+}
+</script>

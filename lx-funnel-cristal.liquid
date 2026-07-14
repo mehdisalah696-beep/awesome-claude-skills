@@ -288,10 +288,9 @@
 .lxfc .details-grid {
   display: grid;
   grid-template-columns: repeat(3,1fr);
-  gap: 20px;
+  gap: 24px;
 }
-@media(max-width:640px){.lxfc .details-grid{grid-template-columns:1fr 1fr;gap:14px;}}
-@media(max-width:380px){.lxfc .details-grid{grid-template-columns:1fr;}}
+@media(max-width:680px){.lxfc .details-grid{grid-template-columns:1fr;gap:16px;}}
 .lxfc .detail-card {
   background: var(--surface);
   border-radius: 14px;
@@ -858,7 +857,7 @@
     <!-- Image produit -->
     <div class="hero-img-wrap">
       {% if product.images.size > 0 %}
-        <img src="{{ product.images[0].src | img_url: '600x600', crop: 'center' }}" alt="{{ product.title }}" loading="eager">
+        <img src="{{ product.images[6].src | img_url: '600x600', crop: 'center' }}" alt="{{ product.title }}" loading="eager">
       {% else %}
         <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#E8F5F2,#A8DDD4);font-size:64px;">💎</div>
       {% endif %}
@@ -965,36 +964,6 @@
           <span class="detail-badge">100% Waterproof</span>
           <h4>Utilisation sous l'eau</h4>
           <p>Parfait sous la douche pour une épilation facile et rapide.</p>
-        </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="detail-card">
-        <img class="detail-img" src="{{ product.images[9].src | img_url: '400x300', crop: 'center' }}" alt="Cristal GJEER — tête cristal" loading="lazy">
-        <div class="detail-body">
-          <span class="detail-badge">Sans produits</span>
-          <h4>Zéro produit chimique</h4>
-          <p>Aucune crème, aucun irritant — seulement le cristal et votre peau.</p>
-        </div>
-      </div>
-
-      <!-- Card 5 -->
-      <div class="detail-card">
-        <img class="detail-img" src="{{ product.images[0].src | img_url: '400x300', crop: 'center' }}" alt="Cristal GJEER rechargeable USB" loading="lazy">
-        <div class="detail-body">
-          <span class="detail-badge">Éco-responsable</span>
-          <h4>Charge USB incluse</h4>
-          <p>Rechargeable en 1h — utilisable partout, même en voyage.</p>
-        </div>
-      </div>
-
-      <!-- Card 6 : Toutes peaux -->
-      <div class="detail-card">
-        <img class="detail-img" src="{{ product.images[1].src | img_url: '400x300', crop: 'center' }}" alt="Adaptée à toutes les peaux" loading="lazy">
-        <div class="detail-body">
-          <span class="detail-badge">Universel</span>
-          <h4>Adaptée à toutes les peaux</h4>
-          <p>Testée sur toutes les carnations — efficace sur poils fins et épais.</p>
         </div>
       </div>
     </div>

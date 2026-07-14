@@ -940,17 +940,17 @@
 
       <!-- Card 1 -->
       <div class="detail-card">
-        <img class="detail-img" src="{{ product.images[0].src | img_url: '400x300', crop: 'center' }}" alt="Cristal GJEER surface nano-cristalline" loading="lazy">
+        <img class="detail-img" src="{{ product.images[6].src | img_url: '400x300', crop: 'center' }}" alt="Cristal GJEER — vue de face" loading="lazy">
         <div class="detail-body">
           <span class="detail-badge">Technologie</span>
           <h4>Surface nano-cristalline</h4>
-          <p>Micro-abrasion douce qui élimine les poils sans tirer ni couper la peau.</p>
+          <p>Micro-abrasion douce qui élimine les poils à la racine sans douleur ni irritation.</p>
         </div>
       </div>
 
       <!-- Card 2 -->
       <div class="detail-card">
-        <img class="detail-img" src="{{ product.images[1].src | img_url: '400x300', crop: 'center' }}" alt="Résultats dès la 1ère utilisation" loading="lazy">
+        <img class="detail-img" src="{{ product.images[7].src | img_url: '400x300', crop: 'center' }}" alt="Cristal GJEER — en main" loading="lazy">
         <div class="detail-body">
           <span class="detail-badge">Résultats</span>
           <h4>Dès la 1ère utilisation</h4>
@@ -960,17 +960,17 @@
 
       <!-- Card 3 -->
       <div class="detail-card">
-        <img class="detail-img" src="{{ product.images[2].src | img_url: '400x300', crop: 'center' }}" alt="Utilisation sous la douche" loading="lazy">
+        <img class="detail-img" src="{{ product.images[8].src | img_url: '400x300', crop: 'center' }}" alt="Cristal GJEER — design compact" loading="lazy">
         <div class="detail-body">
           <span class="detail-badge">100% Waterproof</span>
           <h4>Utilisation sous l'eau</h4>
-          <p>Parfait sous la douche pour une épilation facile et sans effort.</p>
+          <p>Parfait sous la douche pour une épilation facile et rapide.</p>
         </div>
       </div>
 
       <!-- Card 4 -->
       <div class="detail-card">
-        <img class="detail-img" src="{{ product.images[3].src | img_url: '400x300', crop: 'center' }}" alt="Zéro produit chimique" loading="lazy">
+        <img class="detail-img" src="{{ product.images[9].src | img_url: '400x300', crop: 'center' }}" alt="Cristal GJEER — tête cristal" loading="lazy">
         <div class="detail-body">
           <span class="detail-badge">Sans produits</span>
           <h4>Zéro produit chimique</h4>
@@ -980,7 +980,7 @@
 
       <!-- Card 5 -->
       <div class="detail-card">
-        <img class="detail-img" src="{{ product.images[4].src | img_url: '400x300', crop: 'center' }}" alt="Charge USB incluse" loading="lazy">
+        <img class="detail-img" src="{{ product.images[0].src | img_url: '400x300', crop: 'center' }}" alt="Cristal GJEER rechargeable USB" loading="lazy">
         <div class="detail-body">
           <span class="detail-badge">Éco-responsable</span>
           <h4>Charge USB incluse</h4>
@@ -990,7 +990,7 @@
 
       <!-- Card 6 : Toutes peaux -->
       <div class="detail-card">
-        <img class="detail-img" src="{{ product.images[5].src | img_url: '400x300', crop: 'center' }}" alt="Adaptée à toutes les peaux" loading="lazy">
+        <img class="detail-img" src="{{ product.images[1].src | img_url: '400x300', crop: 'center' }}" alt="Adaptée à toutes les peaux" loading="lazy">
         <div class="detail-body">
           <span class="detail-badge">Universel</span>
           <h4>Adaptée à toutes les peaux</h4>
@@ -1147,28 +1147,11 @@
 <!-- ══ SECTION 4 : AVANT / APRÈS ══ -->
 <div class="ba-section section">
   <div class="ba-wrap">
-    <h2 class="section-title">Avant & Après le Cristal GJEER™</h2>
-    <p class="section-sub">Résultats réels — sans filtre, sans retouche, 1ère utilisation</p>
+    <h2 class="section-title">Résultat Immédiat — Dès la 1ère Utilisation</h2>
+    <p class="section-sub">Avant & après réels — sans filtre, sans retouche</p>
 
-    <div class="ba-slider-wrap" id="baSlider">
-      <!-- BEFORE -->
-      <div class="ba-before">
-        <div class="ba-before-inner">
-          <img src="{{ product.images[0].src | img_url: '800x600', crop: 'center' }}" alt="Avant épilation" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
-          <div class="ba-before-text">⚠️ AVANT</div>
-        </div>
-      </div>
-
-      <!-- AFTER -->
-      <div class="ba-after" id="baAfter">
-        <div class="ba-after-inner">
-          <img src="{{ product.images[1].src | img_url: '800x600', crop: 'center' }}" alt="Après épilation" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
-          <div class="ba-after-text">✅ APRÈS — 5 MIN</div>
-        </div>
-      </div>
-
-      <!-- Draggable handle -->
-      <div class="ba-handle" id="baHandle"></div>
+    <div style="border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.15);margin-bottom:32px;">
+      <img src="{{ product.images[5].src | img_url: '900x600', crop: 'center' }}" alt="Résultat avant après Cristal GJEER" style="width:100%;display:block;">
     </div>
 
     <!-- Result stats -->

@@ -1,0 +1,1051 @@
+<div class="lxadv">
+<style>
+/* ===== LUXIVO ADVERTORIAL — CRISTAL ÉPILATOIRE ===== */
+.lxadv {
+  --bg: #FAFAF8;
+  --bg2: #F2F0EB;
+  --bg3: #E8E4DC;
+  --surface: #FFFFFF;
+  --text: #1A1714;
+  --text2: #5A5248;
+  --text3: #9A9088;
+  --border: #E0DAD0;
+  --accent: #C4956A;
+  --accent-deep: #9E7347;
+  --accent-light: rgba(196,149,106,0.12);
+  --red: #E53E3E;
+  --green: #2F855A;
+  --gold: #D69E2E;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 17px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+.lxadv *, .lxadv *::before, .lxadv *::after { box-sizing: border-box; margin: 0; padding: 0; }
+.lxadv a { color: var(--accent-deep); }
+.lxadv img { max-width: 100%; display: block; }
+
+/* UTILITY */
+.lxadv .wrap { max-width: 680px; margin: 0 auto; padding: 0 20px; }
+.lxadv .wrap-wide { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+.lxadv .section { padding: 48px 0; }
+.lxadv .section-sm { padding: 28px 0; }
+
+/* ── 1. BARRE ANNONCE ── */
+.lxadv .top-bar {
+  background: #1A1714;
+  color: #fff;
+  text-align: center;
+  padding: 10px 20px;
+  font-family: -apple-system, sans-serif;
+  font-size: 13px;
+  letter-spacing: .06em;
+}
+.lxadv .top-bar span { color: var(--accent); font-weight: 700; }
+
+/* ── 2. EN-TÊTE MAGAZINE ── */
+.lxadv .mag-header {
+  border-bottom: 1px solid var(--border);
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  background: var(--surface);
+}
+.lxadv .mag-logo {
+  font-family: Georgia, serif;
+  font-size: 20px;
+  letter-spacing: .35em;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: var(--text);
+}
+.lxadv .mag-logo span { color: var(--accent); }
+.lxadv .mag-meta {
+  font-family: -apple-system, sans-serif;
+  font-size: 12px;
+  color: var(--text3);
+  text-align: right;
+}
+.lxadv .mag-cats {
+  background: var(--bg2);
+  border-bottom: 1px solid var(--border);
+  padding: 10px 20px;
+  text-align: center;
+  font-family: -apple-system, sans-serif;
+  font-size: 11px;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--text3);
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.lxadv .mag-cats .active-cat {
+  color: var(--text);
+  font-weight: 700;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 2px;
+}
+
+/* ── 3. HERO ARTICLE ── */
+.lxadv .article-hero { padding: 40px 0 0; background: var(--surface); }
+.lxadv .article-eyebrow {
+  font-family: -apple-system, sans-serif;
+  font-size: 11px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.lxadv .article-title {
+  font-size: clamp(24px, 4.5vw, 40px);
+  font-weight: 700;
+  line-height: 1.2;
+  text-wrap: balance;
+  margin-bottom: 18px;
+  color: var(--text);
+}
+.lxadv .article-subtitle {
+  font-size: 18px;
+  color: var(--text2);
+  line-height: 1.5;
+  margin-bottom: 24px;
+  font-style: italic;
+  text-wrap: balance;
+}
+.lxadv .author-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 32px;
+  font-family: -apple-system, sans-serif;
+}
+.lxadv .author-avatar {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: var(--bg3);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+}
+.lxadv .author-name { font-size: 14px; font-weight: 600; }
+.lxadv .author-info { font-size: 12px; color: var(--text3); }
+.lxadv .hero-img-wrap {
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  background: var(--bg3);
+}
+.lxadv .hero-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+.lxadv .img-caption {
+  font-family: -apple-system, sans-serif;
+  font-size: 12px;
+  color: var(--text3);
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 32px;
+}
+
+/* ── BODY TEXT ── */
+.lxadv .body-text p { margin-bottom: 20px; }
+.lxadv .body-text p:last-child { margin-bottom: 0; }
+.lxadv .body-text strong { color: var(--text); font-weight: 700; }
+.lxadv .dropcap::first-letter {
+  float: left;
+  font-size: 68px;
+  line-height: 0.75;
+  margin: 6px 10px 0 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+.lxadv .pull-quote {
+  border-left: 4px solid var(--accent);
+  padding: 16px 20px;
+  margin: 28px 0;
+  background: var(--accent-light);
+  border-radius: 0 8px 8px 0;
+  font-size: 18px;
+  font-style: italic;
+  color: var(--text2);
+  line-height: 1.5;
+}
+
+/* ── 7. CTA INLINE ── */
+.lxadv .cta-box {
+  background: var(--text);
+  color: #fff;
+  border-radius: 16px;
+  padding: 28px 24px;
+  text-align: center;
+  margin: 36px 0;
+}
+.lxadv .cta-box .cta-title {
+  font-family: -apple-system, sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.lxadv .cta-box .cta-headline {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 6px;
+  color: #fff;
+}
+.lxadv .cta-box .cta-sub {
+  font-size: 14px;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 20px;
+  font-family: -apple-system, sans-serif;
+  font-style: normal;
+}
+.lxadv .cta-btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  font-family: -apple-system, sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: 16px 36px;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background .15s;
+  width: 100%;
+  max-width: 360px;
+}
+.lxadv .cta-btn:hover { background: var(--accent-deep); }
+.lxadv .cta-guarantee {
+  margin-top: 12px;
+  font-family: -apple-system, sans-serif;
+  font-size: 12px;
+  color: rgba(255,255,255,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.lxadv .countdown-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  font-family: -apple-system, sans-serif;
+}
+.lxadv .countdown-unit { text-align: center; }
+.lxadv .countdown-num {
+  background: rgba(255,255,255,0.12);
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 24px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  min-width: 52px;
+  display: block;
+}
+.lxadv .countdown-label { font-size: 10px; text-transform: uppercase; letter-spacing: .1em; color: rgba(255,255,255,0.5); margin-top: 4px; }
+
+/* ── BEFORE/AFTER ── */
+.lxadv .ba-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 28px 0;
+}
+.lxadv .ba-card {
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 3/4;
+  background: var(--bg3);
+}
+.lxadv .ba-card img { width: 100%; height: 100%; object-fit: cover; }
+.lxadv .ba-label {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.75);
+  color: #fff;
+  font-family: -apple-system, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  padding: 6px 14px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+/* ── RÉSULTATS TIMELINE ── */
+.lxadv .timeline { margin: 28px 0; display: flex; flex-direction: column; gap: 16px; }
+.lxadv .timeline-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.lxadv .tl-badge {
+  background: var(--accent);
+  color: #fff;
+  font-family: -apple-system, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 100px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.lxadv .tl-text { font-size: 15px; }
+
+/* ── STATS BAR ── */
+.lxadv .stats-bar {
+  background: var(--text);
+  padding: 28px 20px;
+  margin: 36px 0;
+}
+.lxadv .stats-inner {
+  max-width: 680px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+.lxadv .stat-num {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--accent);
+  font-family: -apple-system, sans-serif;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+.lxadv .stat-label {
+  font-family: -apple-system, sans-serif;
+  font-size: 12px;
+  color: rgba(255,255,255,0.6);
+  margin-top: 4px;
+  line-height: 1.3;
+}
+
+/* ── TÉMOIGNAGES ── */
+.lxadv .testimonials-section { background: var(--surface); padding: 48px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.lxadv .section-title {
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 8px;
+}
+.lxadv .section-sub {
+  text-align: center;
+  color: var(--text3);
+  font-size: 14px;
+  font-family: -apple-system, sans-serif;
+  margin-bottom: 32px;
+  font-style: normal;
+}
+.lxadv .stars-row { color: var(--gold); font-size: 16px; margin-bottom: 4px; }
+.lxadv .testi-grid { display: flex; flex-direction: column; gap: 20px; }
+.lxadv .testi-card {
+  background: var(--bg2);
+  border-radius: 12px;
+  padding: 20px;
+  font-family: -apple-system, sans-serif;
+}
+.lxadv .testi-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.lxadv .testi-avatar {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: var(--bg3);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px;
+}
+.lxadv .testi-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.lxadv .testi-name { font-size: 14px; font-weight: 700; }
+.lxadv .testi-meta { font-size: 12px; color: var(--text3); }
+.lxadv .testi-text { font-size: 14px; line-height: 1.6; color: var(--text2); }
+.lxadv .testi-img {
+  margin-top: 12px;
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  background: var(--bg3);
+}
+.lxadv .testi-img img { width: 100%; height: 100%; object-fit: cover; }
+.lxadv .testi-badge {
+  display: inline-block;
+  background: rgba(47,133,90,0.12);
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 100px;
+  margin-top: 10px;
+}
+
+/* ── COMMENT ÇA MARCHE ── */
+.lxadv .how-it-works { background: var(--bg2); }
+.lxadv .steps-list { display: flex; flex-direction: column; gap: 20px; margin-top: 28px; }
+.lxadv .step-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  font-family: -apple-system, sans-serif;
+}
+.lxadv .step-icon {
+  width: 44px; height: 44px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+.lxadv .step-title { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+.lxadv .step-desc { font-size: 13px; color: var(--text2); line-height: 1.5; }
+
+/* ── GARANTIE ── */
+.lxadv .guarantee-box {
+  border: 2px solid var(--accent);
+  border-radius: 16px;
+  padding: 28px 24px;
+  margin: 36px 0;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  font-family: -apple-system, sans-serif;
+  background: var(--surface);
+}
+.lxadv .guarantee-icon { font-size: 48px; flex-shrink: 0; }
+.lxadv .guarantee-title { font-size: 17px; font-weight: 800; margin-bottom: 6px; }
+.lxadv .guarantee-text { font-size: 13px; color: var(--text2); line-height: 1.6; }
+
+/* ── TRUST BADGES ── */
+.lxadv .trust-row {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding: 24px 20px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin: 0;
+  background: var(--surface);
+  font-family: -apple-system, sans-serif;
+}
+.lxadv .trust-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text2);
+}
+.lxadv .trust-item .ti { font-size: 18px; }
+
+/* ── FAQ ── */
+.lxadv .faq-section { background: var(--bg); }
+.lxadv .faq-list { display: flex; flex-direction: column; gap: 0; margin-top: 24px; }
+.lxadv .faq-item {
+  border-bottom: 1px solid var(--border);
+  font-family: -apple-system, sans-serif;
+}
+.lxadv .faq-q {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 18px 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  line-height: 1.4;
+}
+.lxadv .faq-q .faq-icon { font-size: 20px; flex-shrink: 0; transition: transform .2s; }
+.lxadv .faq-item.open .faq-icon { transform: rotate(45deg); }
+.lxadv .faq-a {
+  display: none;
+  padding: 0 0 18px;
+  font-size: 14px;
+  color: var(--text2);
+  line-height: 1.7;
+}
+.lxadv .faq-item.open .faq-a { display: block; }
+
+/* ── FOOTER CTA ── */
+.lxadv .final-cta {
+  background: linear-gradient(135deg, #1A1714 0%, #2E2620 100%);
+  padding: 56px 20px;
+  text-align: center;
+  color: #fff;
+  font-family: -apple-system, sans-serif;
+}
+.lxadv .final-cta .offer-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 100px;
+  margin-bottom: 20px;
+}
+.lxadv .final-cta h2 {
+  font-size: clamp(22px, 4vw, 36px);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 12px;
+  text-wrap: balance;
+}
+.lxadv .final-cta p {
+  color: rgba(255,255,255,0.65);
+  font-size: 15px;
+  margin-bottom: 28px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.lxadv .price-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.lxadv .price-old { font-size: 18px; color: rgba(255,255,255,0.4); text-decoration: line-through; }
+.lxadv .price-new { font-size: 36px; font-weight: 900; color: var(--accent); }
+.lxadv .price-save {
+  background: rgba(196,149,106,0.2);
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 100px;
+}
+.lxadv .final-btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: 18px 48px;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  max-width: 400px;
+  width: 100%;
+  transition: background .15s, transform .1s;
+  margin-bottom: 16px;
+}
+.lxadv .final-btn:hover { background: var(--accent-deep); transform: translateY(-1px); }
+.lxadv .final-sub { font-size: 12px; color: rgba(255,255,255,0.4); }
+.lxadv .payment-icons { margin-top: 16px; font-size: 22px; letter-spacing: 4px; opacity: 0.5; }
+
+/* RESPONSIVE */
+@media (min-width: 600px) {
+  .lxadv .testi-grid { display: grid; grid-template-columns: 1fr 1fr; }
+  .lxadv .stats-inner { gap: 40px; }
+}
+@media (max-width: 480px) {
+  .lxadv .ba-grid { grid-template-columns: 1fr; }
+  .lxadv .ba-card { aspect-ratio: 4/3; }
+  .lxadv .guarantee-box { flex-direction: column; }
+}
+</style>
+
+<!-- ══════════════════════════════════════════════════════
+     1. BARRE TOP — OFFRE LIMITÉE
+     ══════════════════════════════════════════════════════ -->
+<div class="top-bar">
+  🔥 OFFRE SPÉCIALE — <span>-50% aujourd'hui</span> · Livraison gratuite · Stock limité
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     2. EN-TÊTE MAGAZINE
+     ══════════════════════════════════════════════════════ -->
+<div class="mag-header">
+  <div class="mag-logo">Beauté<span>Actu</span></div>
+  <div class="mag-meta">
+    Publié le {{ 'now' | date: '%d %B %Y' }}<br>
+    Santé &amp; Beauté · Lecture 4 min
+  </div>
+</div>
+<div class="mag-cats">
+  <span>Lifestyle</span>
+  <span class="active-cat">Beauté &amp; Corps</span>
+  <span>Bien-être</span>
+  <span>Tendances</span>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     3. HERO ARTICLE — TITRE + AUTEURE
+     ══════════════════════════════════════════════════════ -->
+<div class="article-hero">
+  <div class="wrap">
+    <div class="article-eyebrow">Témoignage · Épilation &amp; Beauté</div>
+    <h1 class="article-title">
+      "J'avais honte de porter une robe courte — jusqu'à ce que je découvre le Cristal Épilatoire"
+    </h1>
+    <p class="article-subtitle">
+      Cette parisienne de 32 ans a essayé tout ce qui existe pour se débarrasser de ses poils. Ce qu'elle a trouvé a tout changé en 3 semaines.
+    </p>
+    <div class="author-row">
+      <div class="author-avatar">👩‍🦱</div>
+      <div>
+        <div class="author-name">Camille D., 32 ans · Paris</div>
+        <div class="author-info">Contributrice · Beauté &amp; Soins · Vérifié par la rédaction</div>
+      </div>
+    </div>
+    <div class="hero-img-wrap">
+      <img src="{{ product.featured_image | img_url: '1200x675', crop: 'center' }}" alt="Cristal Épilatoire — résultats avant après">
+    </div>
+    <p class="img-caption">Le Cristal Épilatoire de LUXIVO — la méthode qui a changé la routine beauté de milliers de Françaises</p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     4. CORPS — LE PROBLÈME
+     ══════════════════════════════════════════════════════ -->
+<div class="section" style="background: var(--surface);">
+  <div class="wrap">
+    <div class="body-text">
+      <p class="dropcap">Pendant des années, j'ai évité les robes courtes, les jupes, les maillots de bain. Pas par manque de confiance en moi — mais à cause des poils incarnés, des rougeurs, et de cette irritation qui revenait chaque semaine après le rasoir. J'en avais tellement honte.</p>
+      <p>J'ai tout essayé. Le rasoir — rougeurs le lendemain. La cire — douloureuse, chère, 60€ par séance en institut. La crème dépilatoire — odeur insupportable et résultats qui durent 3 jours. L'épilateur électrique — je le rangeais après 5 minutes tellement ça faisait mal.</p>
+      <p><strong>Aucune solution n'était vraiment satisfaisante.</strong> Et à chaque été, je remettais la même question : "comment faire pour avoir des jambes lisses sans me détruire la peau ?"</p>
+
+      <div class="pull-quote">
+        "Je passais 20 minutes dans ma salle de bain tous les deux jours pour un résultat qui durait 48h. J'en avais assez."
+      </div>
+
+      <p>C'est une amie — Laure, esthéticienne depuis 12 ans — qui m'a parlé du Cristal Épilatoire. Au début, j'étais sceptique. J'avais déjà tellement dépensé en produits miracles qui ne marchaient pas.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     5. LA DÉCOUVERTE
+     ══════════════════════════════════════════════════════ -->
+<div class="section" style="background: var(--bg2); border-top: 1px solid var(--border);">
+  <div class="wrap">
+    <div class="body-text">
+      <h2 style="font-size:22px; margin-bottom:16px;">La découverte qui a tout changé</h2>
+      <p>Laure m'a expliqué comment fonctionne le Cristal Épilatoire : <strong>une technologie de cristal nano-abrasif qui élimine les poils en douceur, sans tirer, sans couper, sans douleur.</strong> La surface micro-cristallisée dissout le poil au niveau de la peau — le résultat est une peau lisse, sans irritation.</p>
+      <p>"C'est ce que j'utilise depuis 6 mois sur mes clientes qui ont la peau sensible," m'a-t-elle dit. "Elles ne reviendront jamais à la cire."</p>
+
+      {% if product.images.size > 1 %}
+      <div style="border-radius:12px; overflow:hidden; margin:24px 0; aspect-ratio:3/2; background:var(--bg3);">
+        <img src="{{ product.images[1].src | img_url: '800x533', crop: 'center' }}" alt="Cristal Épilatoire technologie" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+      {% else %}
+      <div style="border-radius:12px; overflow:hidden; margin:24px 0; aspect-ratio:3/2; background:var(--bg3);">
+        <img src="{{ product.featured_image | img_url: '800x533', crop: 'center' }}" alt="Cristal Épilatoire technologie" style="width:100%;height:100%;object-fit:cover;">
+      </div>
+      {% endif %}
+
+      <p>J'ai commandé. 29€ au lieu de 59€ — il y avait une promotion. Je me suis dit : pour une fois, je risque rien avec la garantie satisfaite ou remboursée.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     6. RÉSULTATS — TIMELINE + AVANT/APRÈS
+     ══════════════════════════════════════════════════════ -->
+<div class="section" style="background: var(--surface); border-top: 1px solid var(--border);">
+  <div class="wrap">
+    <h2 style="font-size:22px; margin-bottom:8px;">Mes résultats semaine par semaine</h2>
+    <p style="color:var(--text3); font-family:sans-serif; font-size:14px; margin-bottom:24px;">Voici ce que j'ai noté dans mon carnet beauté :</p>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="tl-badge">Jour 1</div>
+        <div class="tl-text">Première utilisation — 5 minutes sur les jambes. <strong>Zéro douleur.</strong> La peau était douce au toucher, un peu rouge pendant 10 minutes, puis rien.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-badge">Semaine 1</div>
+        <div class="tl-text">Utilisé 3 fois. Les poils repoussent nettement moins vite. <strong>Fini les rougeurs après rasage.</strong> Ma peau ne tiraille plus.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-badge">Semaine 2</div>
+        <div class="tl-text"><strong>90% de réduction visible.</strong> Je n'utilise plus le rasoir du tout. Les poils incarnés ont disparu. Ma peau est douce comme elle ne l'a jamais été.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="tl-badge">Semaine 3</div>
+        <div class="tl-text">J'ai porté une robe courte pour la première fois depuis 2 ans. <strong>Sans stresser. Sans me cacher.</strong> J'aurais dû trouver ça bien plus tôt.</div>
+      </div>
+    </div>
+
+    <h3 style="font-size:18px; margin:32px 0 16px; text-align:center;">Avant / Après — mes photos réelles</h3>
+    <div class="ba-grid">
+      <div class="ba-card">
+        {% if product.images.size > 2 %}
+        <img src="{{ product.images[2].src | img_url: '600x800', crop: 'center' }}" alt="Avant Cristal Épilatoire">
+        {% else %}
+        <img src="{{ product.featured_image | img_url: '600x800', crop: 'center' }}" alt="Avant Cristal Épilatoire">
+        {% endif %}
+        <div class="ba-label">Avant</div>
+      </div>
+      <div class="ba-card">
+        {% if product.images.size > 3 %}
+        <img src="{{ product.images[3].src | img_url: '600x800', crop: 'center' }}" alt="Après Cristal Épilatoire">
+        {% else %}
+        <img src="{{ product.featured_image | img_url: '600x800', crop: 'center' }}" alt="Après Cristal Épilatoire">
+        {% endif %}
+        <div class="ba-label">Après 3 semaines</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     7. CTA #1
+     ══════════════════════════════════════════════════════ -->
+<div style="padding: 0 20px;">
+  <div class="wrap" style="padding:0;">
+    <div class="cta-box">
+      <div class="cta-title">⚡ Offre flash — 50% de réduction</div>
+      <div class="cta-headline">Essaie le Cristal Épilatoire<br>sans risque pendant 30 jours</div>
+      <div class="cta-sub">Stock limité · L'offre expire dans :</div>
+      <div class="countdown-wrap" id="lxadv-cd">
+        <div class="countdown-unit"><span class="countdown-num" id="lxadv-h">00</span><div class="countdown-label">Heures</div></div>
+        <div class="countdown-unit"><span class="countdown-num" id="lxadv-m">23</span><div class="countdown-label">Min</div></div>
+        <div class="countdown-unit"><span class="countdown-num" id="lxadv-s">59</span><div class="countdown-label">Sec</div></div>
+      </div>
+      <a href="{{ product.url }}" class="cta-btn">🛒 Je veux des jambes lisses →</a>
+      <div class="cta-guarantee">🔒 Paiement sécurisé · Satisfaite ou Remboursée 30 jours</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     8. COMMENT ÇA MARCHE
+     ══════════════════════════════════════════════════════ -->
+<div class="section how-it-works" style="border-top:1px solid var(--border);">
+  <div class="wrap">
+    <h2 style="font-size:22px; margin-bottom:4px;">Comment fonctionne le Cristal Épilatoire ?</h2>
+    <p style="color:var(--text3); font-family:sans-serif; font-size:14px; margin-bottom:0;">La technologie qui fait la différence :</p>
+
+    <div class="steps-list">
+      <div class="step-item">
+        <div class="step-icon">💎</div>
+        <div>
+          <div class="step-title">Technologie Nano-Cristal</div>
+          <div class="step-desc">La surface en cristal micro-abrasif élimine le poil au ras de la peau en le dissolvant — sans couper, sans tirer, sans douleur.</div>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-icon">🌸</div>
+        <div>
+          <div class="step-title">Sans irritation, même sur peau sensible</div>
+          <div class="step-desc">Contrairement au rasoir qui coupe et irrite, le Cristal respecte la barrière cutanée. Zéro rougeur, zéro poil incarné.</div>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-icon">⏱️</div>
+        <div>
+          <div class="step-title">5 minutes, 3x par semaine</div>
+          <div class="step-desc">Mouvement circulaire doux. Aucune préparation, aucun produit supplémentaire. Utilisable sur jambes, aisselles, bras, visage.</div>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-icon">📉</div>
+        <div>
+          <div class="step-title">Repousse ralentie dès la 2e semaine</div>
+          <div class="step-desc">Les poils repoussent plus fins, plus lentement. Résultats visibles dès 7 jours, durables en 3 semaines.</div>
+        </div>
+      </div>
+    </div>
+
+    {% if product.images.size > 4 %}
+    <div style="margin-top:28px; border-radius:12px; overflow:hidden; aspect-ratio:16/9; background:var(--bg3);">
+      <img src="{{ product.images[4].src | img_url: '800x450', crop: 'center' }}" alt="Utilisation Cristal Épilatoire" style="width:100%;height:100%;object-fit:cover;">
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     9. STATS BAR
+     ══════════════════════════════════════════════════════ -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div>
+      <div class="stat-num">4 200+</div>
+      <div class="stat-label">Françaises l'ont commandé ce mois</div>
+    </div>
+    <div>
+      <div class="stat-num">96%</div>
+      <div class="stat-label">Taux de satisfaction client</div>
+    </div>
+    <div>
+      <div class="stat-num">4.9★</div>
+      <div class="stat-label">Note moyenne sur 1 247 avis</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     10. TÉMOIGNAGES
+     ══════════════════════════════════════════════════════ -->
+<div class="testimonials-section">
+  <div class="wrap-wide">
+    <div class="section-title">Elles aussi ont franchi le pas</div>
+    <div class="section-sub">Des résultats réels, des femmes réelles — vérifiés par notre équipe</div>
+
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-header">
+          <div class="testi-avatar">👩</div>
+          <div>
+            <div class="testi-name">Sophie M.</div>
+            <div class="testi-meta">Lyon · Achat vérifié ✓</div>
+          </div>
+        </div>
+        <div class="stars-row">★★★★★</div>
+        <div class="testi-text">"Je ne croyais pas que ça pouvait marcher aussi bien. Après 2 semaines, mes jambes sont incroyablement lisses et je n'ai plus aucun poil incarné. C'est la première fois en 15 ans que j'obtiens ce résultat !"</div>
+        <div class="testi-img">
+          {% assign ti = product.images %}
+          <img src="{{ ti[0].src | img_url: '400x300', crop: 'center' }}" alt="résultat Sophie">
+        </div>
+        <span class="testi-badge">✓ Résultat vérifié</span>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-header">
+          <div class="testi-avatar">👩‍🦰</div>
+          <div>
+            <div class="testi-name">Amina K.</div>
+            <div class="testi-meta">Paris · Achat vérifié ✓</div>
+          </div>
+        </div>
+        <div class="stars-row">★★★★★</div>
+        <div class="testi-text">"Peau très foncée et sensible, je ne pouvais pas utiliser de cire. Le Cristal est une révolution pour moi. Aucune irritation, aucun poil incarné. Je l'ai commandé aussi pour ma sœur !"</div>
+        <div class="testi-img">
+          <img src="{{ ti[1].src | img_url: '400x300', crop: 'center' }}" alt="résultat Amina">
+        </div>
+        <span class="testi-badge">✓ Résultat vérifié</span>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-header">
+          <div class="testi-avatar">🧑‍🦱</div>
+          <div>
+            <div class="testi-name">Nathalie R.</div>
+            <div class="testi-meta">Marseille · Achat vérifié ✓</div>
+          </div>
+        </div>
+        <div class="stars-row">★★★★★</div>
+        <div class="testi-text">"Esthéticienne depuis 8 ans et je le recommande à toutes mes clientes. Parfait pour entretenir l'épilation entre les séances. Le rapport qualité-prix est exceptionnel."</div>
+        <div class="testi-img">
+          <img src="{{ ti[2].src | img_url: '400x300', crop: 'center' }}" alt="résultat Nathalie">
+        </div>
+        <span class="testi-badge">✓ Professionnelle beauté</span>
+      </div>
+
+      <div class="testi-card">
+        <div class="testi-header">
+          <div class="testi-avatar">👩‍🦳</div>
+          <div>
+            <div class="testi-name">Isabelle T.</div>
+            <div class="testi-meta">Bordeaux · Achat vérifié ✓</div>
+          </div>
+        </div>
+        <div class="stars-row">★★★★★</div>
+        <div class="testi-text">"J'avais peur que ça ne marche pas sur mes poils foncés et épais. Résultat bluffant en 10 jours. Je l'utilise maintenant pour les aisselles aussi. Fini le rasoir !"</div>
+        <div class="testi-img">
+          <img src="{{ ti[3].src | img_url: '400x300', crop: 'center' }}" alt="résultat Isabelle">
+        </div>
+        <span class="testi-badge">✓ Résultat vérifié</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     11. CTA #2
+     ══════════════════════════════════════════════════════ -->
+<div style="padding: 40px 20px; background: var(--bg2); border-top:1px solid var(--border);">
+  <div class="wrap" style="padding:0; text-align:center; font-family:sans-serif;">
+    <p style="font-size:14px; color:var(--text3); margin-bottom:8px;">Rejoins les 4 200+ femmes qui ont déjà changé leur routine</p>
+    <a href="{{ product.url }}" class="cta-btn" style="display:inline-block; max-width:360px; font-family:sans-serif;">✨ Essayer le Cristal — -50% →</a>
+    <p style="margin-top:10px; font-size:12px; color:var(--text3);">🚚 Livraison express · 🔒 Paiement sécurisé · 🔄 30j remboursée</p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     12. GARANTIE
+     ══════════════════════════════════════════════════════ -->
+<div style="padding:8px 20px 0; background:var(--surface); border-top:1px solid var(--border);">
+  <div class="wrap" style="padding:0;">
+    <div class="guarantee-box">
+      <div class="guarantee-icon">🛡️</div>
+      <div>
+        <div class="guarantee-title">Garantie Satisfaite ou Remboursée — 30 jours</div>
+        <div class="guarantee-text">Tu as 30 jours pour essayer le Cristal Épilatoire sans aucun risque. Si tu n'es pas 100% satisfaite de tes résultats, on te rembourse intégralement — sans poser de questions, sans retour nécessaire. C'est notre promesse.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TRUST BADGES -->
+<div class="trust-row">
+  <div class="trust-item"><span class="ti">🔒</span> Paiement sécurisé</div>
+  <div class="trust-item"><span class="ti">🚚</span> Livraison 3–5 jours</div>
+  <div class="trust-item"><span class="ti">🔄</span> Retour 30 jours</div>
+  <div class="trust-item"><span class="ti">💬</span> Support 7j/7</div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     13. FAQ
+     ══════════════════════════════════════════════════════ -->
+<div class="section faq-section" style="border-top:1px solid var(--border);">
+  <div class="wrap">
+    <h2 class="section-title" style="text-align:left;">Questions fréquentes</h2>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="lxadvFaq(this)">
+          Est-ce que ça fait mal ?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Non, le Cristal Épilatoire est totalement indolore. Contrairement à la cire ou à l'épilateur électrique, il n'arrache pas les poils — il les dissout en douceur grâce à la technologie nano-cristal. Même les personnes avec une peau très sensible l'utilisent sans inconfort.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="lxadvFaq(this)">
+          En combien de temps est-ce que je vois des résultats ?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">La plupart de nos clientes voient une différence dès la première semaine. Une réduction significative des poils et de la repousse est visible à partir de 2 semaines d'utilisation régulière (3x par semaine, 5 minutes par zone).</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="lxadvFaq(this)">
+          Ça marche sur quel type de peau et de poils ?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Le Cristal fonctionne sur tous les types de peau — y compris les peaux foncées et très sensibles — et sur tous les types de poils (fins, épais, foncés, clairs). Il est particulièrement efficace pour les zones sensibles comme les aisselles et le maillot.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="lxadvFaq(this)">
+          Et si ça ne marche pas pour moi ?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">C'est pour ça qu'on offre 30 jours de garantie satisfaite ou remboursée. Si après 4 semaines d'utilisation tu n'es pas satisfaite, on te rembourse à 100% — sans question, sans retour obligatoire. Tu ne risques rien.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="lxadvFaq(this)">
+          Où puis-je l'utiliser sur le corps ?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Jambes, aisselles, bras, nuque, visage (lèvres, menton, sourcils). Le Cristal est assez doux pour toutes les zones du corps. Déconseillé uniquement sur les zones enflammées ou blessées.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="lxadvFaq(this)">
+          Combien de temps dure le produit ?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">Avec une utilisation 3x par semaine, un Cristal dure en moyenne 6 mois. Soit moins de 5€ par mois — contre 60€ minimum en institut.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     14. CTA FINAL
+     ══════════════════════════════════════════════════════ -->
+<div class="final-cta">
+  <div class="wrap" style="padding:0;">
+    <div class="offer-badge">🔥 Offre limitée — -50%</div>
+    <h2>Tu mérites des jambes lisses,<br>sans douleur, sans compromis.</h2>
+    <p>Rejoins les 4 200+ femmes qui ont déjà dit adieu au rasoir, à la cire, et aux poils incarnés.</p>
+
+    <div class="price-row">
+      <span class="price-old">59,00€</span>
+      <span class="price-new">29,00€</span>
+      <span class="price-save">–50%</span>
+    </div>
+
+    <a href="{{ product.url }}" class="final-btn">🛒 Commander maintenant →</a>
+    <div class="final-sub">Livraison gratuite · Garantie 30 jours · Stock limité</div>
+    <div class="payment-icons">💳 🔒</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════════════════
+     JAVASCRIPT
+     ══════════════════════════════════════════════════════ -->
+<script>
+(function() {
+  // COUNTDOWN
+  var end = new Date();
+  end.setHours(end.getHours() + 2, end.getMinutes() + 14, end.getSeconds() + 33);
+  var stored = sessionStorage.getItem('lxadv_cd');
+  if (stored) {
+    end = new Date(parseInt(stored));
+  } else {
+    sessionStorage.setItem('lxadv_cd', end.getTime().toString());
+  }
+  function tick() {
+    var diff = Math.max(0, end - new Date());
+    var h = Math.floor(diff / 3600000);
+    var m = Math.floor((diff % 3600000) / 60000);
+    var s = Math.floor((diff % 60000) / 1000);
+    var pad = function(n){ return n < 10 ? '0'+n : ''+n; };
+    var eh = document.getElementById('lxadv-h');
+    var em = document.getElementById('lxadv-m');
+    var es = document.getElementById('lxadv-s');
+    if (eh) eh.textContent = pad(h);
+    if (em) em.textContent = pad(m);
+    if (es) es.textContent = pad(s);
+  }
+  tick();
+  setInterval(tick, 1000);
+})();
+
+// FAQ
+window.lxadvFaq = function(btn) {
+  var item = btn.closest('.faq-item');
+  var open = item.classList.contains('open');
+  var all = document.querySelectorAll('.lxadv .faq-item');
+  for (var i = 0; i < all.length; i++) all[i].classList.remove('open');
+  if (!open) item.classList.add('open');
+};
+</script>
+
+{% schema %}
+{
+  "name": "LUXIVO Advertorial Cristal",
+  "settings": [],
+  "presets": [{ "name": "LUXIVO Advertorial Cristal" }]
+}
+{% endschema %}
+</div>

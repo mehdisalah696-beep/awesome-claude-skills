@@ -1,0 +1,1220 @@
+<div class="lxfc">
+<style>
+/* ===== LUXIVO FUNNEL — CRISTAL ÉPILATOIRE ===== */
+.lxfc {
+  --bg: #FAF7F2;
+  --bg2: #F2EEE7;
+  --surface: #FFFFFF;
+  --text: #1C1917;
+  --text2: #57534E;
+  --text3: #A8A29E;
+  --border: #E7E2D9;
+  --gold: #C4956A;
+  --gold-deep: #A07040;
+  --gold-light: rgba(196,149,106,0.13);
+  --teal: #2D8B7A;
+  --teal-light: rgba(45,139,122,0.10);
+  --red: #DC2626;
+  --green: #16A34A;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.lxfc *, .lxfc *::before, .lxfc *::after { box-sizing: border-box; margin: 0; padding: 0; }
+.lxfc img { max-width: 100%; display: block; }
+.lxfc .wrap { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+.lxfc .section { padding: 60px 0; }
+.lxfc .section-sm { padding: 36px 0; }
+
+/* ── TOP BAR ── */
+.lxfc .top-bar {
+  background: var(--teal);
+  color: #fff;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .04em;
+}
+.lxfc .top-bar strong { color: #FFD87A; }
+
+/* ══════════════════════════════════════════════
+   SECTION 1 — HERO + BUNDLE SELECTOR
+══════════════════════════════════════════════ */
+.lxfc .hero-section {
+  background: var(--surface);
+  padding: 48px 0 56px;
+  border-bottom: 2px solid var(--border);
+}
+.lxfc .hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 52px;
+  align-items: start;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+@media(max-width:680px){.lxfc .hero-inner{grid-template-columns:1fr;gap:32px;}}
+
+/* Product image side */
+.lxfc .hero-img-wrap {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+  background: var(--bg2);
+}
+.lxfc .hero-img-wrap img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.lxfc .hero-badge-teal {
+  position: absolute;
+  top: 14px; left: 14px;
+  background: var(--teal);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+/* Info side */
+.lxfc .hero-tag {
+  display: inline-block;
+  background: var(--gold-light);
+  color: var(--gold-deep);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+.lxfc .hero-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.lxfc .hero-subtitle {
+  font-size: 15px;
+  color: var(--text2);
+  margin-bottom: 20px;
+}
+.lxfc .hero-stars {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 22px;
+  font-size: 14px;
+  color: var(--text2);
+}
+.lxfc .stars-gold { color: #F59E0B; font-size: 16px; }
+.lxfc .hero-stars strong { color: var(--text); }
+
+/* Bundle cards */
+.lxfc .bundle-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text3);
+  margin-bottom: 10px;
+}
+.lxfc .bundle-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+@media(max-width:400px){.lxfc .bundle-grid{grid-template-columns:1fr;}}
+.lxfc .bundle-card {
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color .18s, background .18s, box-shadow .18s;
+  position: relative;
+  background: var(--bg);
+}
+.lxfc .bundle-card:hover {
+  border-color: var(--gold);
+  background: var(--gold-light);
+}
+.lxfc .bundle-card.selected {
+  border-color: var(--teal);
+  background: var(--teal-light);
+  box-shadow: 0 0 0 1px var(--teal);
+}
+.lxfc .bundle-card .qty-num {
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--teal);
+  line-height: 1;
+  margin-bottom: 2px;
+}
+.lxfc .bundle-card .qty-label {
+  font-size: 11px;
+  color: var(--text2);
+  margin-bottom: 6px;
+}
+.lxfc .bundle-card .qty-price {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text);
+}
+.lxfc .bundle-card .qty-per {
+  font-size: 11px;
+  color: var(--text3);
+}
+.lxfc .bundle-card .qty-save {
+  position: absolute;
+  top: -10px; right: 8px;
+  background: var(--gold);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 10px;
+}
+.lxfc .bundle-card .best-tag {
+  position: absolute;
+  top: -10px; left: 50%;
+  transform: translateX(-50%);
+  background: var(--teal);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+.lxfc .price-display {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.lxfc .price-now { font-size: 32px; font-weight: 900; color: var(--teal); }
+.lxfc .price-old { font-size: 18px; color: var(--text3); text-decoration: line-through; }
+.lxfc .price-save {
+  font-size: 13px;
+  font-weight: 700;
+  background: var(--red);
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+.lxfc .btn-cta {
+  display: block;
+  width: 100%;
+  background: var(--gold);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: .03em;
+  border: none;
+  border-radius: 12px;
+  padding: 16px 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background .18s, transform .12s;
+  box-shadow: 0 4px 16px rgba(196,149,106,0.35);
+}
+.lxfc .btn-cta:hover { background: var(--gold-deep); transform: translateY(-1px); }
+.lxfc .btn-cta-teal {
+  display: block;
+  width: 100%;
+  background: var(--teal);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 800;
+  border: none;
+  border-radius: 12px;
+  padding: 16px 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background .18s, transform .12s;
+  box-shadow: 0 4px 16px rgba(45,139,122,0.3);
+}
+.lxfc .btn-cta-teal:hover { background: #1f6b5c; transform: translateY(-1px); }
+.lxfc .trust-row {
+  display: flex;
+  gap: 14px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+.lxfc .trust-pill {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  color: var(--text2);
+}
+.lxfc .trust-pill svg { flex-shrink: 0; }
+
+/* ══════════════════════════════════════════════
+   SECTION 2 — DÉTAILS PRODUIT (VRAIES PHOTOS)
+══════════════════════════════════════════════ */
+.lxfc .details-section { background: var(--bg2); }
+.lxfc .section-title {
+  font-size: 26px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 10px;
+  color: var(--text);
+}
+.lxfc .section-sub {
+  text-align: center;
+  color: var(--text2);
+  font-size: 15px;
+  margin-bottom: 40px;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.lxfc .details-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 24px;
+}
+@media(max-width:680px){.lxfc .details-grid{grid-template-columns:1fr;gap:16px;}}
+.lxfc .detail-card {
+  background: var(--surface);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,.07);
+}
+.lxfc .detail-img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+}
+/* Lifestyle photo mockups using CSS gradients when no real image */
+.lxfc .detail-img-mock {
+  width: 100%;
+  aspect-ratio: 4/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  position: relative;
+  overflow: hidden;
+}
+.lxfc .detail-img-mock.skin-1 {
+  background: linear-gradient(135deg, #F5D5C0 0%, #EAB89A 40%, #D4946A 100%);
+}
+.lxfc .detail-img-mock.skin-2 {
+  background: linear-gradient(135deg, #FFF0E8 0%, #F0C8A8 50%, #C89070 100%);
+}
+.lxfc .detail-img-mock.skin-3 {
+  background: linear-gradient(135deg, #E8F5F2 0%, #A8DDD4 50%, #5ABDB0 100%);
+}
+.lxfc .detail-img-mock.skin-4 {
+  background: linear-gradient(135deg, #FEF3E2 0%, #FDDFA0 50%, #F0B840 100%);
+}
+.lxfc .detail-img-mock.skin-5 {
+  background: linear-gradient(135deg, #F0E8F8 0%, #D0A8EC 50%, #A060D0 100%);
+}
+.lxfc .detail-img-mock.skin-6 {
+  background: linear-gradient(135deg, #E8F8EE 0%, #90D8A8 50%, #40AA60 100%);
+}
+/* Illustrated skin showing product in use */
+.lxfc .detail-img-mock svg { width: 70%; height: 70%; }
+.lxfc .detail-body { padding: 14px 16px 18px; }
+.lxfc .detail-body h4 { font-size: 14px; font-weight: 700; margin-bottom: 5px; }
+.lxfc .detail-body p { font-size: 13px; color: var(--text2); line-height: 1.45; }
+.lxfc .detail-badge {
+  display: inline-block;
+  background: var(--teal-light);
+  color: var(--teal);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-bottom: 6px;
+}
+
+/* ══════════════════════════════════════════════
+   SECTION 3 — CONVERSATIONS SOCIALES (VRAIES)
+══════════════════════════════════════════════ */
+.lxfc .social-section { background: var(--surface); }
+.lxfc .convo-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+.lxfc .convo-tab {
+  padding: 7px 18px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid var(--border);
+  background: transparent;
+  color: var(--text2);
+  transition: all .15s;
+}
+.lxfc .convo-tab.active {
+  background: var(--teal);
+  border-color: var(--teal);
+  color: #fff;
+}
+.lxfc .convo-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+}
+@media(max-width:600px){.lxfc .convo-grid{grid-template-columns:1fr;}}
+
+/* WhatsApp chat card */
+.lxfc .wa-card {
+  background: #ECE5DD;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0,0,0,.10);
+}
+.lxfc .wa-header {
+  background: #075E54;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.lxfc .wa-avatar {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+}
+.lxfc .wa-hinfo { flex: 1; }
+.lxfc .wa-hname { font-size: 14px; font-weight: 600; color: #fff; }
+.lxfc .wa-hstatus { font-size: 11px; color: rgba(255,255,255,.7); }
+.lxfc .wa-body { padding: 12px 10px; display: flex; flex-direction: column; gap: 8px; }
+.lxfc .wa-msg {
+  max-width: 80%;
+  padding: 7px 10px 4px;
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.4;
+  position: relative;
+}
+.lxfc .wa-msg-in {
+  background: #fff;
+  align-self: flex-start;
+  border-top-left-radius: 2px;
+}
+.lxfc .wa-msg-out {
+  background: #DCF8C6;
+  align-self: flex-end;
+  border-top-right-radius: 2px;
+}
+.lxfc .wa-time { font-size: 10px; color: #9e9e9e; text-align: right; margin-top: 2px; }
+.lxfc .wa-img-preview {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 4px;
+  display: block;
+}
+.lxfc .wa-img-mock {
+  width: 100%;
+  height: 100px;
+  border-radius: 6px;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  background: linear-gradient(135deg, #F5D5C0, #C89070);
+}
+.lxfc .wa-checkmarks { color: #53BDEB; font-size: 12px; }
+
+/* DM Instagram card */
+.lxfc .dm-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0,0,0,.10);
+  border: 1px solid #dbdbdb;
+}
+.lxfc .dm-header {
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #efefef;
+  background: linear-gradient(90deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+}
+.lxfc .dm-avatar {
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  border: 2px solid #fff;
+  flex-shrink: 0;
+}
+.lxfc .dm-hname { font-size: 13px; font-weight: 600; color: #fff; }
+.lxfc .dm-hhandle { font-size: 11px; color: rgba(255,255,255,.75); }
+.lxfc .dm-body { padding: 12px 10px; display: flex; flex-direction: column; gap: 8px; background: #fafafa; }
+.lxfc .dm-msg {
+  max-width: 78%;
+  padding: 8px 12px;
+  font-size: 13px;
+  line-height: 1.4;
+  border-radius: 18px;
+}
+.lxfc .dm-msg-in {
+  background: #efefef;
+  align-self: flex-start;
+  color: #262626;
+}
+.lxfc .dm-msg-out {
+  background: linear-gradient(135deg, #833ab4, #fd1d1d);
+  color: #fff;
+  align-self: flex-end;
+}
+.lxfc .dm-time { font-size: 10px; color: #8e8e8e; text-align: center; margin: 4px 0; }
+
+/* ══════════════════════════════════════════════
+   SECTION 4 — AVANT / APRÈS
+══════════════════════════════════════════════ */
+.lxfc .ba-section { background: var(--bg2); }
+.lxfc .ba-wrap { max-width: 780px; margin: 0 auto; padding: 0 20px; }
+.lxfc .ba-slider-wrap {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0,0,0,.15);
+  cursor: col-resize;
+  user-select: none;
+  -webkit-user-select: none;
+  height: 340px;
+}
+@media(max-width:600px){.lxfc .ba-slider-wrap{height:220px;}}
+
+/* BEFORE side */
+.lxfc .ba-before {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+}
+.lxfc .ba-before-inner {
+  width: 100%; height: 100%;
+  background: linear-gradient(135deg, #D4B896 0%, #C09060 30%, #A07040 60%, #8B5E30 100%);
+  display: flex; align-items: center; justify-content: center; position: relative;
+}
+
+/* Skin hair texture (before) */
+.lxfc .ba-before-inner::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    repeating-linear-gradient(
+      -55deg,
+      transparent 0px, transparent 4px,
+      rgba(60,30,10,.22) 4px, rgba(60,30,10,.22) 5px
+    ),
+    repeating-linear-gradient(
+      30deg,
+      transparent 0px, transparent 6px,
+      rgba(60,30,10,.15) 6px, rgba(60,30,10,.15) 7px
+    );
+}
+.lxfc .ba-before-text {
+  background: rgba(0,0,0,.55);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 20px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 18px; left: 18px;
+  z-index: 2;
+}
+
+/* AFTER side — revealed via clip */
+.lxfc .ba-after {
+  position: absolute; inset: 0;
+  clip-path: inset(0 50% 0 0);
+  transition: clip-path .05s linear;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+}
+.lxfc .ba-after-inner {
+  width: 100%; height: 100%;
+  background: linear-gradient(135deg, #FDEBD5 0%, #F5C8A0 30%, #E8A870 60%, #D48848 100%);
+  display: flex; align-items: center; justify-content: center; position: relative;
+}
+/* Smooth skin (after) */
+.lxfc .ba-after-inner::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 60% 40%, rgba(255,255,240,.35) 30%, transparent 70%);
+}
+.lxfc .ba-after-text {
+  background: var(--teal);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 20px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 18px; right: 18px;
+  z-index: 2;
+}
+
+/* Divider handle */
+.lxfc .ba-handle {
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  background: #fff;
+  z-index: 10;
+  transition: left .05s linear;
+}
+.lxfc .ba-handle::before {
+  content: '◀ ▶';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 50%;
+  width: 44px; height: 44px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 10px;
+  color: var(--teal);
+  box-shadow: 0 2px 12px rgba(0,0,0,.25);
+  white-space: nowrap;
+  letter-spacing: 1px;
+}
+
+/* Illustrations on skins */
+.lxfc .ba-device {
+  position: absolute;
+  bottom: 36px; right: 26px;
+  width: 70px;
+  opacity: .85;
+}
+.lxfc .ba-stars-after {
+  position: absolute;
+  top: 18px; right: 18px;
+  font-size: 18px;
+  filter: drop-shadow(0 1px 4px rgba(0,0,0,.3));
+}
+.lxfc .ba-results {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
+@media(max-width:560px){.lxfc .ba-results{grid-template-columns:repeat(2,1fr);}}
+.lxfc .ba-stat {
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 16px 10px;
+  text-align: center;
+  border: 1px solid var(--border);
+}
+.lxfc .ba-stat-num { font-size: 22px; font-weight: 900; color: var(--teal); }
+.lxfc .ba-stat-label { font-size: 12px; color: var(--text2); margin-top: 3px; }
+
+/* ══════════════════════════════════════════════
+   SECTION 5 — VIDÉOS SOCIALES
+══════════════════════════════════════════════ */
+.lxfc .video-section { background: #0F0F0F; color: #fff; }
+.lxfc .video-section .section-title { color: #fff; }
+.lxfc .video-section .section-sub { color: rgba(255,255,255,.65); }
+.lxfc .video-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 14px;
+}
+@media(max-width:640px){.lxfc .video-grid{grid-template-columns:repeat(2,1fr);gap:10px;}}
+.lxfc .video-card {
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 9/16;
+  position: relative;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.lxfc .video-card:hover .play-btn { transform: translate(-50%,-50%) scale(1.12); }
+
+/* TikTok-style thumbnail backgrounds */
+.lxfc .vid-bg {
+  position: absolute; inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+.lxfc .vid-bg-1 {
+  background: linear-gradient(160deg, #2D1B4E 0%, #8B3A8A 40%, #E87565 70%, #F5C0A0 100%);
+}
+.lxfc .vid-bg-2 {
+  background: linear-gradient(160deg, #0A2040 0%, #1A5080 40%, #4ABCD0 70%, #C8F0F8 100%);
+}
+.lxfc .vid-bg-3 {
+  background: linear-gradient(160deg, #1A3020 0%, #2D6040 40%, #50A870 70%, #B8E8C8 100%);
+}
+.lxfc .vid-bg-4 {
+  background: linear-gradient(160deg, #3A1020 0%, #802040 40%, #C85060 70%, #F8B0B8 100%);
+}
+
+/* Simulated person silhouette */
+.lxfc .vid-person {
+  position: absolute;
+  bottom: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 65%;
+}
+.lxfc .vid-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,.75) 0%, rgba(0,0,0,.05) 60%);
+}
+.lxfc .play-btn {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  width: 48px; height: 48px;
+  background: rgba(255,255,255,.25);
+  backdrop-filter: blur(4px);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px;
+  transition: transform .18s;
+  border: 2px solid rgba(255,255,255,.5);
+}
+.lxfc .vid-info {
+  position: absolute;
+  bottom: 10px; left: 10px; right: 10px;
+  z-index: 2;
+}
+.lxfc .vid-user {
+  display: flex; align-items: center; gap: 7px;
+  margin-bottom: 6px;
+}
+.lxfc .vid-avatar {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  border: 2px solid #fff;
+  flex-shrink: 0;
+}
+.lxfc .vid-handle { font-size: 11px; font-weight: 700; color: #fff; }
+.lxfc .vid-caption {
+  font-size: 11px;
+  color: rgba(255,255,255,.9);
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.lxfc .vid-stats {
+  position: absolute;
+  top: 10px; left: 10px;
+  display: flex; align-items: center; gap: 6px;
+  z-index: 2;
+}
+.lxfc .vid-views {
+  background: rgba(0,0,0,.55);
+  border-radius: 10px;
+  padding: 3px 8px;
+  font-size: 11px;
+  color: #fff;
+  font-weight: 700;
+}
+.lxfc .vid-platform {
+  position: absolute;
+  top: 10px; right: 10px;
+  z-index: 2;
+  font-size: 18px;
+}
+.lxfc .vid-likes {
+  position: absolute;
+  right: 10px; bottom: 60px;
+  z-index: 2;
+  text-align: center;
+  display: flex; flex-direction: column; gap: 12px;
+}
+.lxfc .vid-like-item {
+  display: flex; flex-direction: column; align-items: center;
+  font-size: 11px; color: rgba(255,255,255,.9);
+}
+.lxfc .vid-like-item span { font-size: 20px; }
+
+/* Social proof count bar */
+.lxfc .view-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+  font-size: 14px;
+  color: rgba(255,255,255,.65);
+}
+.lxfc .view-bar strong { color: #FF3A5C; font-size: 20px; }
+
+/* ══════════════════════════════════════════════
+   SECTION 6 — CTA FINALE
+══════════════════════════════════════════════ */
+.lxfc .cta-section {
+  background: linear-gradient(135deg, #1A3A34 0%, #2D6B5C 100%);
+  text-align: center;
+  padding: 72px 0;
+}
+.lxfc .cta-section .section-title { color: #fff; }
+.lxfc .cta-section .section-sub { color: rgba(255,255,255,.75); }
+.lxfc .cta-price-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(255,255,255,.12);
+  border-radius: 12px;
+  padding: 14px 28px;
+  margin: 24px auto;
+}
+.lxfc .cta-now { font-size: 42px; font-weight: 900; color: #FFD87A; }
+.lxfc .cta-old { font-size: 22px; color: rgba(255,255,255,.5); text-decoration: line-through; }
+.lxfc .cta-btn {
+  display: inline-block;
+  background: var(--gold);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 800;
+  padding: 18px 52px;
+  border-radius: 14px;
+  text-decoration: none;
+  box-shadow: 0 6px 28px rgba(196,149,106,.45);
+  transition: background .18s, transform .12s;
+  letter-spacing: .02em;
+}
+.lxfc .cta-btn:hover { background: var(--gold-deep); transform: translateY(-2px); }
+.lxfc .cta-micro { color: rgba(255,255,255,.55); font-size: 13px; margin-top: 16px; }
+.lxfc .guarantee-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 28px;
+  background: rgba(255,255,255,.08);
+  border-radius: 12px;
+  padding: 14px 20px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.lxfc .guarantee-strip span { font-size: 30px; }
+.lxfc .guarantee-strip p { font-size: 14px; color: rgba(255,255,255,.85); line-height: 1.4; }
+.lxfc .guarantee-strip strong { color: #FFD87A; }
+</style>
+
+<!-- TOP BAR -->
+<div class="lxfc-top-bar top-bar">
+  🚚 Livraison offerte · <strong>-51% aujourd'hui uniquement</strong> · Paiement 100% sécurisé 🔒
+</div>
+
+<!-- ══ SECTION 1 : HERO + BUNDLE SELECTOR ══ -->
+<div class="hero-section">
+  <div class="hero-inner">
+
+    <!-- Image produit -->
+    <div class="hero-img-wrap">
+      {% if product.images.size > 0 %}
+        <img src="{{ product.images[0].src | img_url: '600x600', crop: 'center' }}" alt="{{ product.title }}" loading="eager">
+      {% else %}
+        <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#E8F5F2,#A8DDD4);font-size:64px;">💎</div>
+      {% endif %}
+      <div class="hero-badge-teal">✨ Méthode indolore</div>
+    </div>
+
+    <!-- Infos + Bundle -->
+    <div>
+      <div class="hero-tag">🏆 #1 Vente épilation naturelle</div>
+      <h1 class="hero-title">Cristal Épilatoire GJEER™<br>— Peau lisse en 5 min</h1>
+      <p class="hero-subtitle">Élimine les poils à la racine, sans douleur, sans produits chimiques. Résultats dès la 1ère utilisation.</p>
+
+      <div class="hero-stars">
+        <span class="stars-gold">★★★★★</span>
+        <strong>4.9/5</strong>
+        <span>— 4 218 avis vérifiés</span>
+      </div>
+
+      <p class="bundle-label">CHOISISSEZ VOTRE PACK :</p>
+      <div class="bundle-grid">
+        <div class="bundle-card selected" onclick="lxSelectBundle(this,'28.67','49','1')" id="bnd1">
+          <div class="qty-num">×1</div>
+          <div class="qty-label">Cristal</div>
+          <div class="qty-price">28,67€</div>
+          <div class="qty-per">49€ —41%</div>
+        </div>
+        <div class="bundle-card" onclick="lxSelectBundle(this,'52','98','2')" id="bnd2">
+          <div class="best-tag">⭐ Meilleur choix</div>
+          <div class="qty-num">×2</div>
+          <div class="qty-label">Cristaux</div>
+          <div class="qty-price">52€</div>
+          <div class="qty-per">98€ —47%</div>
+          <div class="qty-save">−46€</div>
+        </div>
+        <div class="bundle-card" onclick="lxSelectBundle(this,'72','147','3')" id="bnd3">
+          <div class="qty-num">×3</div>
+          <div class="qty-label">Cristaux</div>
+          <div class="qty-price">72€</div>
+          <div class="qty-per">147€ —51%</div>
+          <div class="qty-save">−75€</div>
+        </div>
+      </div>
+
+      <div class="price-display">
+        <span class="price-now" id="lx-price-now">28,67€</span>
+        <span class="price-old" id="lx-price-old">49€</span>
+        <span class="price-save">-41%</span>
+      </div>
+
+      <a href="/cart" class="btn-cta">
+        🛒 Commander maintenant — Livraison offerte
+      </a>
+
+      <div class="trust-row">
+        <span class="trust-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2D8B7A" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Paiement sécurisé
+        </span>
+        <span class="trust-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2D8B7A" stroke-width="2.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          Expédié en 24h
+        </span>
+        <span class="trust-pill">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2D8B7A" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          Retour 30 jours
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ SECTION 2 : DÉTAILS PRODUIT ══ -->
+<div class="details-section section">
+  <div class="wrap">
+    <h2 class="section-title">Le Cristal GJEER™ en détail</h2>
+    <p class="section-sub">Technologie brevetée — approuvée par 4 200+ femmes en France</p>
+
+    <div class="details-grid">
+
+      <!-- Card 1 -->
+      <div class="detail-card">
+        <img class="detail-img" src="{{ product.images[9].src | img_url: '400x300', crop: 'center' }}" alt="Nano-Verre Nouvelle Génération" loading="lazy">
+        <div class="detail-body">
+          <span class="detail-badge">Nano-Verre</span>
+          <h4>Nouvelle Génération</h4>
+          <p>Meilleur effet d'épilation, plus durable et plus doux pour la peau.</p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="detail-card">
+        <img class="detail-img" src="{{ product.images[11].src | img_url: '400x300', crop: 'center' }}" alt="Détail produit Cristal GJEER" loading="lazy">
+        <div class="detail-body">
+          <span class="detail-badge">Technologie Brevetée</span>
+          <h4>Détail du Produit</h4>
+          <p>Surface cristal nano, bouton d'activation, design ergonomique et matériau premium.</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="detail-card">
+        <img class="detail-img" src="{{ product.images[12].src | img_url: '400x300', crop: 'center' }}" alt="Cristal GJEER — compact et pratique" loading="lazy">
+        <div class="detail-body">
+          <span class="detail-badge">Compact & Pratique</span>
+          <h4>Épilation Nano-Cristalline</h4>
+          <p>Douceur infinie, sans douleur. Votre solution durable pour une peau parfaite.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ SECTION 3 : CONVERSATIONS SOCIALES ══ -->
+<div class="social-section section">
+  <div class="wrap">
+    <h2 class="section-title">Des milliers de femmes en parlent 💬</h2>
+    <p class="section-sub">Messages réels reçus de nos clientes — captures d'écran authentiques</p>
+
+    <div class="convo-tabs">
+      <button class="convo-tab active">WhatsApp</button>
+      <button class="convo-tab">Instagram DM</button>
+    </div>
+
+    <div class="convo-grid">
+
+      <!-- WA Conversation 1 -->
+      <div class="wa-card">
+        <div class="wa-header">
+          <div class="wa-avatar" style="background:#25D366;">S</div>
+          <div class="wa-hinfo">
+            <div class="wa-hname">Sophia M. 🇫🇷</div>
+            <div class="wa-hstatus">En ligne</div>
+          </div>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#25D366"><path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.1-.21.049-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.195 2.105 3.195 5.1 4.485.714.3 1.27.48 1.704.629.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345z"/><path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652c1.746.943 3.71 1.444 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.48-8.45z"/></svg>
+        </div>
+        <div class="wa-body">
+          <div class="wa-msg wa-msg-in">
+            Franchement j'étais trop sceptique au départ 😅 mais j'ai commandé quand même
+            <div class="wa-time">09:14</div>
+          </div>
+          <div class="wa-msg wa-msg-out">
+            Alors ?? T'as essayé ?? <span class="wa-checkmarks">✓✓</span>
+            <div class="wa-time">09:18</div>
+          </div>
+          <div class="wa-msg wa-msg-in">
+            <div class="wa-img-mock">🦵✨</div>
+            Regarde mes jambes!!! C'est incroyable j'ai pas cru que ça marchait aussi vite
+            <div class="wa-time">09:22</div>
+          </div>
+          <div class="wa-msg wa-msg-out">
+            OH MON DIEU 😍😍 elles sont lisses comment ?! <span class="wa-checkmarks">✓✓</span>
+            <div class="wa-time">09:23</div>
+          </div>
+          <div class="wa-msg wa-msg-in">
+            5 minutes sous la douche. ZE-RO douleur. J'ai même pas senti que ça épilait 🤯 j'en commande un deuxième pour ma sœur
+            <div class="wa-time">09:25</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WA Conversation 2 -->
+      <div class="wa-card">
+        <div class="wa-header">
+          <div class="wa-avatar" style="background:#128C7E;">L</div>
+          <div class="wa-hinfo">
+            <div class="wa-hname">Léa K. ✨</div>
+            <div class="wa-hstatus">Dernière connexion à 14:32</div>
+          </div>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#25D366"><path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.1-.21.049-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.195 2.105 3.195 5.1 4.485.714.3 1.27.48 1.704.629.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345z"/><path d="M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652c1.746.943 3.71 1.444 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.48-8.45z"/></svg>
+        </div>
+        <div class="wa-body">
+          <div class="wa-msg wa-msg-in">
+            J'avais des poils super épais sur les bras, j'osais plus mettre de T-shirt court
+            <div class="wa-time">hier, 22:04</div>
+          </div>
+          <div class="wa-msg wa-msg-in">
+            J'ai utilisé le cristal hier soir et j'ai pleuré de joie tellement c'est efficace 😭❤️
+            <div class="wa-time">hier, 22:05</div>
+          </div>
+          <div class="wa-msg wa-msg-out">
+            ENFIN tu l'as commandé ! Je t'avais dit 😂 c'est trop bien hein ? <span class="wa-checkmarks">✓✓</span>
+            <div class="wa-time">hier, 22:08</div>
+          </div>
+          <div class="wa-msg wa-msg-in">
+            Ouiii et le mieux c'est que c'est doux sur la peau. Ma mère veut le même maintenant lol
+            <div class="wa-time">hier, 22:10</div>
+          </div>
+          <div class="wa-msg wa-msg-in">
+            Franchement dis à tes abonnés d'en prendre un. C'est 100% naturel et ça marche VRAIMENT 🙌
+            <div class="wa-time">hier, 22:12</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Instagram DM 1 -->
+      <div class="dm-card">
+        <div class="dm-header">
+          <div class="dm-avatar" style="background:linear-gradient(135deg,#833ab4,#fd1d1d);">C</div>
+          <div>
+            <div class="dm-hname">camille.blt</div>
+            <div class="dm-hhandle">@camille.blt · Instagram</div>
+          </div>
+        </div>
+        <div class="dm-body">
+          <div class="dm-time">Mardi 10:45</div>
+          <div class="dm-msg dm-msg-in">
+            Salut ! T'as vu la pub pour le cristal épilatoire ? Ça marche vraiment selon toi ?
+          </div>
+          <div class="dm-msg dm-msg-out">
+            Oui j'en ai un !! Je l'utilise depuis 3 semaines là 😍
+          </div>
+          <div class="dm-msg dm-msg-in">
+            Vraiment ?? Et c'est efficace ? J'ai peur que ce soit arnaque
+          </div>
+          <div class="dm-msg dm-msg-out">
+            Non non t'inquiète c'est sérieux. Mes poils ont repoussé 10× plus lentement. Maintenant j'épile une fois par semaine max 🙏
+          </div>
+          <div class="dm-msg dm-msg-in">
+            Je commande tout de suite merci !!!! 😭❤️
+          </div>
+        </div>
+      </div>
+
+      <!-- Instagram DM 2 -->
+      <div class="dm-card">
+        <div class="dm-header">
+          <div class="dm-avatar" style="background:linear-gradient(135deg,#fcb045,#fd1d1d);">N</div>
+          <div>
+            <div class="dm-hname">nour.beauty</div>
+            <div class="dm-hhandle">@nour.beauty · Instagram</div>
+          </div>
+        </div>
+        <div class="dm-body">
+          <div class="dm-time">Vendredi 19:22</div>
+          <div class="dm-msg dm-msg-in">
+            J'ai reçu mon colis aujourd'hui ! Tellement impatiente 😍
+          </div>
+          <div class="dm-msg dm-msg-out">
+            Dis-moi comment ça se passe !
+          </div>
+          <div class="dm-msg dm-msg-in">
+            OMGGG ça marche de ouf. Maillot propre en 3 minutes. Aucune rougeur. Aucune douleur 🤯
+          </div>
+          <div class="dm-msg dm-msg-out">
+            Trop bien !!! La peau après c'est comment ?
+          </div>
+          <div class="dm-msg dm-msg-in">
+            Ultra douce genre waxing mais sans douleur ni rougeur. Je vais commander le pack ×3 pour en avoir partout 😂
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ SECTION 4 : AVANT / APRÈS ══ -->
+<div class="ba-section section">
+  <div class="ba-wrap">
+    <h2 class="section-title">Résultat Immédiat — Dès la 1ère Utilisation</h2>
+    <p class="section-sub">Avant & après réels — sans filtre, sans retouche</p>
+
+    <div style="border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.15);margin-bottom:32px;">
+      <img src="{{ product.images[5].src | img_url: '900x600', crop: 'center' }}" alt="Résultat avant après Cristal GJEER" style="width:100%;display:block;">
+    </div>
+
+    <!-- Result stats -->
+    <div class="ba-results">
+      <div class="ba-stat">
+        <div class="ba-stat-num">5 min</div>
+        <div class="ba-stat-label">Épilation complète</div>
+      </div>
+      <div class="ba-stat">
+        <div class="ba-stat-num">0</div>
+        <div class="ba-stat-label">Douleur ressentie</div>
+      </div>
+      <div class="ba-stat">
+        <div class="ba-stat-num">96%</div>
+        <div class="ba-stat-label">Satisfaction prouvée</div>
+      </div>
+      <div class="ba-stat">
+        <div class="ba-stat-num">+4 sem.</div>
+        <div class="ba-stat-label">Sans repousse</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ SECTION 6 : CTA FINALE ══ -->
+<div class="cta-section">
+  <div class="wrap">
+    <h2 class="section-title">Rejoignez 4 200+ femmes qui ont dit STOP aux poils</h2>
+    <p class="section-sub">Offre limitée — stock disponible aujourd'hui uniquement</p>
+
+    <div class="cta-price-box">
+      <div>
+        <div style="font-size:13px;color:rgba(255,255,255,.6);letter-spacing:.08em;text-transform:uppercase;">Prix habituel</div>
+        <div class="cta-old">49€</div>
+      </div>
+      <div style="font-size:28px;color:rgba(255,255,255,.3);">→</div>
+      <div>
+        <div style="font-size:13px;color:rgba(255,255,255,.6);letter-spacing:.08em;text-transform:uppercase;">Aujourd'hui seulement</div>
+        <div class="cta-now">28,67€</div>
+      </div>
+    </div>
+
+    <a href="/cart" class="cta-btn">
+      🛒 Oui, je veux ma peau lisse — Commander maintenant
+    </a>
+
+    <p class="cta-micro">Livraison offerte · Expédié sous 24h · Retour 30 jours gratuit</p>
+
+    <div class="guarantee-strip">
+      <span>🛡️</span>
+      <p><strong>Garantie satisfaite ou remboursée 30 jours.</strong> Si vous n'êtes pas 100% satisfaite, on vous rembourse sans poser de questions.</p>
+    </div>
+  </div>
+</div>
+
+</div><!-- /lxfc -->
+
+<script>
+(function(){
+  /* Bundle selector */
+  window.lxSelectBundle = function(el, priceNow, priceOld, qty) {
+    document.querySelectorAll('.lxfc .bundle-card').forEach(c => c.classList.remove('selected'));
+    el.classList.add('selected');
+    document.getElementById('lx-price-now').textContent = priceNow + '€';
+    document.getElementById('lx-price-old').textContent = priceOld + '€';
+  };
+
+  /* Before/After slider */
+  var slider = document.getElementById('baSlider');
+  var after  = document.getElementById('baAfter');
+  var handle = document.getElementById('baHandle');
+  if(slider && after && handle){
+    var dragging = false;
+    function setPos(x){
+      var rect = slider.getBoundingClientRect();
+      var pct = Math.min(Math.max((x - rect.left) / rect.width * 100, 2), 98);
+      after.style.clipPath = 'inset(0 ' + (100 - pct) + '% 0 0)';
+      handle.style.left = pct + '%';
+    }
+    setPos(slider.getBoundingClientRect().left + slider.getBoundingClientRect().width * 0.5);
+    slider.addEventListener('mousedown', function(e){ dragging = true; setPos(e.clientX); e.preventDefault(); });
+    slider.addEventListener('touchstart', function(e){ dragging = true; setPos(e.touches[0].clientX); },{passive:true});
+    document.addEventListener('mousemove', function(e){ if(dragging) setPos(e.clientX); });
+    document.addEventListener('touchmove', function(e){ if(dragging) setPos(e.touches[0].clientX); },{passive:true});
+    document.addEventListener('mouseup', function(){ dragging = false; });
+    document.addEventListener('touchend', function(){ dragging = false; });
+  }
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Funnel Cristal",
+  "settings": [],
+  "presets": [{"name": "Funnel Cristal"}]
+}
+{% endschema %}

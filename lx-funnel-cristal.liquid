@@ -857,7 +857,7 @@
     <!-- Image produit -->
     <div class="hero-img-wrap">
       {% if product.images.size > 0 %}
-        <img src="{{ product.images[6].src | img_url: '600x600', crop: 'center' }}" alt="{{ product.title }}" loading="eager">
+        <img src="{{ product.images[12].src | img_url: '600x600', crop: 'center' }}" alt="{{ product.title }}" loading="eager">
       {% else %}
         <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#E8F5F2,#A8DDD4);font-size:64px;">💎</div>
       {% endif %}
@@ -878,33 +878,33 @@
 
       <p class="bundle-label">CHOISISSEZ VOTRE PACK :</p>
       <div class="bundle-grid">
-        <div class="bundle-card" onclick="lxSelectBundle(this,'29','59','1')" id="bnd1">
+        <div class="bundle-card selected" onclick="lxSelectBundle(this,'28.67','49','1')" id="bnd1">
           <div class="qty-num">×1</div>
           <div class="qty-label">Cristal</div>
-          <div class="qty-price">29€</div>
-          <div class="qty-per">59€ —51%</div>
+          <div class="qty-price">28,67€</div>
+          <div class="qty-per">49€ —41%</div>
         </div>
-        <div class="bundle-card selected" onclick="lxSelectBundle(this,'49','99','2')" id="bnd2">
+        <div class="bundle-card" onclick="lxSelectBundle(this,'52','98','2')" id="bnd2">
           <div class="best-tag">⭐ Meilleur choix</div>
           <div class="qty-num">×2</div>
           <div class="qty-label">Cristaux</div>
-          <div class="qty-price">49€</div>
-          <div class="qty-per">99€ —51%</div>
-          <div class="qty-save">−24.50€</div>
+          <div class="qty-price">52€</div>
+          <div class="qty-per">98€ —47%</div>
+          <div class="qty-save">−46€</div>
         </div>
-        <div class="bundle-card" onclick="lxSelectBundle(this,'69','138','3')" id="bnd3">
+        <div class="bundle-card" onclick="lxSelectBundle(this,'72','147','3')" id="bnd3">
           <div class="qty-num">×3</div>
           <div class="qty-label">Cristaux</div>
-          <div class="qty-price">69€</div>
-          <div class="qty-per">138€ —50%</div>
-          <div class="qty-save">−34€</div>
+          <div class="qty-price">72€</div>
+          <div class="qty-per">147€ —51%</div>
+          <div class="qty-save">−75€</div>
         </div>
       </div>
 
       <div class="price-display">
-        <span class="price-now" id="lx-price-now">49€</span>
-        <span class="price-old" id="lx-price-old">99€</span>
-        <span class="price-save">-51%</span>
+        <span class="price-now" id="lx-price-now">28,67€</span>
+        <span class="price-old" id="lx-price-old">49€</span>
+        <span class="price-save">-41%</span>
       </div>
 
       <a href="/cart" class="btn-cta">
@@ -1154,12 +1154,12 @@
     <div class="cta-price-box">
       <div>
         <div style="font-size:13px;color:rgba(255,255,255,.6);letter-spacing:.08em;text-transform:uppercase;">Prix habituel</div>
-        <div class="cta-old">59€</div>
+        <div class="cta-old">49€</div>
       </div>
       <div style="font-size:28px;color:rgba(255,255,255,.3);">→</div>
       <div>
         <div style="font-size:13px;color:rgba(255,255,255,.6);letter-spacing:.08em;text-transform:uppercase;">Aujourd'hui seulement</div>
-        <div class="cta-now">29€</div>
+        <div class="cta-now">28,67€</div>
       </div>
     </div>
 

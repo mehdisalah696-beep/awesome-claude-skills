@@ -857,7 +857,7 @@
     <!-- Image produit -->
     <div class="hero-img-wrap">
       {% if product.images.size > 0 %}
-        <img src="{{ product.images[13].src | img_url: '600x600', crop: 'center' }}" alt="{{ product.title }}" loading="eager">
+        <img src="{{ product.images[0].src | img_url: '600x600', crop: 'center' }}" alt="{{ product.title }}" loading="eager">
       {% else %}
         <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#E8F5F2,#A8DDD4);font-size:64px;">💎</div>
       {% endif %}
